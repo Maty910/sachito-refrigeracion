@@ -3,7 +3,6 @@ import { ArrowUpRight, ShieldCheck } from 'lucide-react';
 export const Hero = () => {
   return (
     <section className="relative min-h-screen pt-32 pb-20 flex flex-col justify-center bg-brand-dark overflow-hidden">
-      {/* Background Shapes: Usamos brand-primary y brand-accent con opacidad */}
       <div className="absolute top-0 right-0 w-150 h-150 bg-brand-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-100 h-100 bg-brand-accent/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
 
@@ -32,7 +31,7 @@ export const Hero = () => {
 
             <div className="flex flex-wrap gap-4">
               <button 
-                onClick={() => window.open('https://wa.me/123456789')}
+                onClick={() => window.open('https://wa.me/+5491123376861?text=Hola!%20Quisiera%20solicitar%20un%20turno%20para%20servicio%20de%20refrigeración')}
                 className="bg-brand-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-brand-accent hover:text-brand-dark transition-all flex items-center gap-3 group cursor-pointer shadow-lg shadow-brand-primary/20"
               >
                 Solicitar Visita 
