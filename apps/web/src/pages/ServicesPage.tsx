@@ -1,6 +1,7 @@
 import { ServicesList } from '../components/sections/ServicesList';
 import { ProcessSteps } from '../components/sections/ProcessSteps';
-import { GuaranteeSection } from '../components/sections/GuaranteeSection'; // Reutilizamos la garantía acá también si queremos
+import { GuaranteeSection } from '../components/sections/GuaranteeSection';
+import { FAQSection } from '../components/sections/FAQSection'; // <--- Importamos
 
 export const ServicesPage = () => {
   return (
@@ -17,14 +18,17 @@ export const ServicesPage = () => {
         </div>
       </div>
 
-      {/* Lista de Servicios (Reutilizamos el componente que ya tenés) */}
+      {/* 1. Lista (Claro) */}
       <ServicesList />
       
-      {/* El Proceso de Trabajo */}
+      {/* 2. Proceso (Oscuro) */}
       <ProcessSteps />
       
-      {/* Sección de Garantía (opcional repetirla acá, pero da confianza) */}
+      {/* 3. Garantía (Claro) */}
       <GuaranteeSection />
+
+      {/* 4. FAQs (Oscuro) */}
+      <FAQSection />
     </div>
   );
 };

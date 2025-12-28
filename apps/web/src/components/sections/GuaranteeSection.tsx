@@ -2,11 +2,10 @@ import { ShieldCheck, FileCheck, Award, ThumbsUp } from 'lucide-react';
 
 export const GuaranteeSection = () => {
   return (
-    // CAMBIO: Fondo Hielo (Surface Ice)
     <section id="garantia" className="py-24 bg-surface-ice relative overflow-hidden">
       
-      {/* Decoración de fondo sutil (Marca de agua oscura muy suave) */}
-      <div className="absolute -right-20 -top-20 text-brand-dark/5 rotate-12 pointer-events-none">
+      {/* Volvemos al SVG original sin blur, ya que no era el problema */}
+      <div className="absolute -right-20 -top-20 text-brand-dark opacity-5 pointer-events-none">
         <ShieldCheck size={400} />
       </div>
 
@@ -15,7 +14,6 @@ export const GuaranteeSection = () => {
           <span className="text-brand-primary font-bold tracking-widest text-sm uppercase mb-2 block font-display">
             Tranquilidad Total
           </span>
-          {/* CAMBIO: Textos oscuros (On Ice) */}
           <h2 className="text-4xl md:text-5xl font-bold text-text-on-ice font-display mb-6">
             Garantía Escrita y <br/>
             <span className="text-brand-accent">Respaldo Técnico.</span>
@@ -28,7 +26,7 @@ export const GuaranteeSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Card 1 */}
-          <div className="bg-surface-white border border-black/5 p-8 rounded-3xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+          <div className="bg-surface-white border border-slate-200 p-8 rounded-3xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div className="bg-brand-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-brand-primary mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors">
               <ShieldCheck size={32} />
             </div>
@@ -39,7 +37,7 @@ export const GuaranteeSection = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-surface-white border border-black/5 p-8 rounded-3xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+          <div className="bg-surface-white border border-slate-200 p-8 rounded-3xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div className="bg-brand-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-brand-primary mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors">
               <Award size={32} />
             </div>
@@ -50,7 +48,7 @@ export const GuaranteeSection = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-surface-white border border-black/5 p-8 rounded-3xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+          <div className="bg-surface-white border border-slate-200 p-8 rounded-3xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div className="bg-brand-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-brand-primary mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors">
               <FileCheck size={32} />
             </div>
@@ -61,7 +59,7 @@ export const GuaranteeSection = () => {
           </div>
 
           {/* Card 4 */}
-          <div className="bg-surface-white border border-black/5 p-8 rounded-3xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+          <div className="bg-surface-white border border-slate-200 p-8 rounded-3xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div className="bg-brand-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-brand-primary mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors">
               <ThumbsUp size={32} />
             </div>
