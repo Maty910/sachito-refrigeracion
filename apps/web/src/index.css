@@ -1,0 +1,92 @@
+/* IMPORTANTE: Asegurate de haber instalado las fuentes:
+  pnpm add @fontsource/space-grotesk @fontsource/manrope
+*/
+@import "tailwindcss";
+
+/* --- TEMA GLOBAL (Tailwind v4) --- */
+@theme {
+  /* 1. TIPOGRAFÍAS 
+    Definimos los stacks de fuentes.
+    --font-display: Para Títulos (Space Grotesk)
+    --font-sans: Para Cuerpo/Texto (Manrope)
+  */
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+
+  /* 2. PALETA DE COLORES (Semántica)
+    En lugar de nombres abstractos, usamos nombres según su función.
+  */
+
+  /* BRAND: Los colores identidad de Sachito */
+  --color-brand-dark: #0B1035;       /* El azul profundo (Fondo principal) */
+  --color-brand-primary: #1e3a8a;    /* Azul intermedio (Botones secundarios, hovers) */
+  --color-brand-accent: #06b6d4;     /* Cyan eléctrico (Detalles, íconos, botones CTA) */
+  --color-brand-highlight: #22d3ee;  /* Cyan más brillante (Hovers, glows) */
+
+  /* SURFACE: Colores para tarjetas, secciones y capas */
+  --color-surface-dark: #080c29;     /* Fondo más oscuro (Footer, secciones secundarias) */
+  --color-surface-card: #131b4d;     /* Fondo de tarjetas (ligeramente más claro que el dark) */
+  --color-surface-light: #ffffff;    /* Blanco puro (Texto sobre oscuro) */
+  
+  /* STATUS: Colores funcionales */
+  --color-status-success: #10b981;   /* Verde (Mensajes de éxito, garantías) */
+  --color-status-error: #ef4444;     /* Rojo (Errores de formulario) */
+  --color-status-warning: #f59e0b;   /* Naranja/Amarillo (Alertas) */
+
+  /* TEXT: Jerarquía de textos (usar con opacity si es necesario) */
+  --color-text-main: #ffffff;        /* Texto principal */
+  --color-text-muted: #94a3b8;       /* Texto secundario (Slate-400) */
+  --color-text-inverted: #0B1035;    /* Texto oscuro sobre fondo claro */
+
+  /* 3. ANIMACIONES Y EFECTOS
+    Podemos definir curvas y sombras custom
+  */
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.5); /* Resplandor Cyan */
+}
+
+/* --- ESTILOS BASE --- */
+/* Configuraciones que aplican a toda la app */
+
+:root {
+  color-scheme: dark; /* Le avisa al navegador que es un sitio oscuro */
+}
+
+body {
+  background-color: var(--color-brand-dark);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  
+  /* Suavizado de fuentes para que se vean nítidas */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Evita el rebote del scroll en Safari/Mac */
+  overscroll-behavior: none;
+}
+
+/* Títulos siempre con la fuente Display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em; /* Un toque más "apretado" queda más pro */
+  font-weight: 700;
+}
+
+/* Scrollbar personalizada (opcional pero queda cheto) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-card);
+  border-radius: 5px;
+  border: 2px solid var(--color-brand-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-primary);
+}
