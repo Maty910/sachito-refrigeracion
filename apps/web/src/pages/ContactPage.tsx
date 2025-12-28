@@ -34,7 +34,7 @@ export const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-sm text-text-muted font-bold uppercase">Urgencias / WhatsApp</p>
-                    <p className="text-xl text-white font-display">11 1234-5678</p>
+                    <p className="text-xl text-white font-display">11 2337 6861</p>
                     <p className="text-xs text-brand-accent mt-1">Respuesta inmediata</p>
                   </div>
                 </div>
@@ -62,13 +62,25 @@ export const ContactPage = () => {
               </div>
             </div>
 
-            {/* Mapa Simulado */}
+            {/* Mapa */}
             <div className="aspect-video bg-surface-card rounded-3xl border border-white/5 overflow-hidden relative group">
-              <div className="absolute inset-0 bg-brand-primary/10 flex items-center justify-center group-hover:bg-brand-primary/20 transition-colors cursor-pointer">
+              <a 
+                href="https://www.google.com/maps/place/Castelar,+Buenos+Aires" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full h-full"
+              >
+                <img 
+                  src="../../public/imgs/mapa castelar.png"
+                  alt="Mapa de Castelar, Buenos Aires"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-brand-primary/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
                   <p className="text-brand-accent font-bold flex items-center gap-2">
                     <MapPin /> Ver en Google Maps
                   </p>
-              </div>
+                </div>
+              </a>
             </div>
           </div>
 
@@ -79,12 +91,11 @@ export const ContactPage = () => {
 
             <form 
               className="space-y-6" 
-              // ACÁ ESTABA EL PROBLEMA: Agregamos el tipo React.FormEvent
               onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
                 e.preventDefault();
                 const formData = new FormData(e.currentTarget);
                 const text = `Hola! Soy ${formData.get('name')}. Mi consulta es: ${formData.get('message')}`;
-                window.open(`https://wa.me/123456789?text=${encodeURIComponent(text)}`);
+                window.open(`https://wa.me/+5491123376861?text=${encodeURIComponent(text)}`);
               }}
             >
               

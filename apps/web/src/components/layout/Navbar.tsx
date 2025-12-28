@@ -10,7 +10,6 @@ export const Navbar = () => {
       <div className="container mx-auto px-6 h-20 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          {/* CAMBIO: bg-blue-600 -> bg-brand-primary */}
           <div className="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center text-white group-hover:bg-brand-accent transition-colors">
             <Snowflake size={24} />
           </div>
@@ -29,8 +28,7 @@ export const Navbar = () => {
           <Link to="/contacto" className="text-sm text-text-muted hover:text-brand-accent transition-colors">Contacto</Link>
           
           <button 
-            onClick={() => window.open('https://wa.me/123456789')}
-            /* CAMBIO: bg-white text-[#0B1035] -> bg-brand-accent text-brand-dark */
+            onClick={() => window.open('https://wa.me/+5491123376861?text=Hola!%20Quisiera%20solicitar%20un%20turno%20para%20servicio%20de%20refrigeración')}
             className="bg-brand-accent text-brand-dark px-6 py-2.5 rounded-full font-bold text-sm hover:bg-brand-highlight hover:shadow-[0_0_15px_rgba(34,211,238,0.4)] transition-all flex items-center gap-2 cursor-pointer"
           >
             Pedir Turno <ArrowUpRight size={16} />

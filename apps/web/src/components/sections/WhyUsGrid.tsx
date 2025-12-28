@@ -52,7 +52,7 @@ export const WhyUsGrid = () => {
              {/* Usamos status-success para el botón de WhatsApp (verde) */}
             <div 
               className="bg-status-success p-4 rounded-full text-white shadow-lg shadow-status-success/20 animate-pulse cursor-pointer hover:scale-110 transition-transform" 
-              onClick={() => window.open('https://wa.me/123456789')}
+              onClick={() => window.open('https://wa.me/+5491123376861')}
             >
               <Phone size={32} />
             </div>
