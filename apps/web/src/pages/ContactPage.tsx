@@ -71,7 +71,7 @@ export const ContactPage = () => {
                 className="block w-full h-full"
               >
                 <img 
-                  src="../../public/imgs/mapa castelar.png"
+                  src="../assets/imgs/mapa castelar.png"
                   alt="Mapa de Castelar, Buenos Aires"
                   className="w-full h-full object-cover"
                 />
