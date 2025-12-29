@@ -13,11 +13,19 @@ export const CoveragePage = () => {
     },
     {
       area: "Partido de Merlo",
-      neighborhoods: ["San Antonio de Padua", "Merlo Centro"]
+      neighborhoods: ["San Antonio de Padua", "Merlo Centro", "Libertad"]
     },
     {
       area: "Partido de Hurlingham",
-      neighborhoods: ["Hurlingham", "Villa Tesei"]
+      neighborhoods: ["Hurlingham", "Villa Tesei", "William Morris"]
+    },
+    {
+      area: "Partido de La Matanza",
+      neighborhoods: ["Ramos Mejía", "Ciudad Evita"]
+    },
+    {
+      area: "Partido de Tres de Febrero",
+      neighborhoods: ["Caseros", "Ciudad Jardín "]
     }
   ];
 
@@ -66,7 +74,7 @@ export const CoveragePage = () => {
                 <h4 className="text-white font-bold mb-1">Sobre los Viáticos</h4>
                 <p className="text-sm text-text-muted">
                   El presupuesto base incluye traslados dentro de Castelar e Ituzaingó. 
-                  Para zonas más alejadas (más de 10km de nuestra base), se puede cobrar un adicional mínimo por combustible y peajes.
+                  Para zonas más alejadas (más de 8km de nuestra base), se puede cobrar un adicional mínimo por combustible, peajes y estacionamiento en casa de ser necesario.
                 </p>
               </div>
             </div>
