@@ -1,82 +1,96 @@
-import { Phone, Zap, Wrench, MapPin } from 'lucide-react';
+import { Phone, Zap, Wrench, MapPin, ArrowRight } from 'lucide-react';
 
 export const WhyUsGrid = () => {
   return (
-    // ID cambiado a 'eleginos' para diferenciar de 'nosotros'
-    <section id="eleginos" className="py-24 bg-surface-ice">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-on-ice font-display mb-4">
-            ¿Por qué los vecinos <br/> nos eligen?
+    <section id="eleginos" className="py-24 bg-surface-ice relative overflow-hidden">
+      {/* Decoración de fondo sutil (Eco del Hero) */}
+      <div className="absolute top-0 right-0 w-125 h-125 bg-brand-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-125 h-125 bg-brand-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        
+        {/* Título Estilo Hero */}
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-text-on-ice font-display mb-6 tracking-tight">
+            ¿Por qué elegir a <br/>
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary to-brand-accent">
+              Sachito.Ref?
+            </span>
           </h2>
-          <p className="text-text-muted-ice max-w-xl">
-            En un mercado lleno de improvisados, nosotros apostamos a la calidad y la transparencia.
+          <p className="text-text-muted-ice text-lg">
+            No somos una app anónima. Somos técnicos reales, de barrio, comprometidos con la calidad y tu seguridad.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 auto-rows-fr">
+        <div className="grid md:grid-cols-3 gap-6">
           
-          {/* Card Principal: Urgencias (Fondo Oscuro para resaltar) */}
-          <div className="md:col-span-2 bg-brand-dark rounded-3xl p-10 flex flex-col justify-between relative overflow-hidden group shadow-xl shadow-brand-dark/10">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+          {/* Card 1: Urgencias (Principal) - Blanca con detalles sutiles */}
+          <div className="md:col-span-2 bg-white rounded-3xl p-8 md:p-10 shadow-xl shadow-slate-200/50 border border-slate-100 relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+            {/* Glow sutil en la esquina */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-brand-accent/20 transition-colors"></div>
             
-            <div className="relative z-10">
-              <div className="bg-white/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm">
-                <Zap className="text-brand-highlight" size={32} />
+            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-8 h-full">
+                <div className="bg-brand-primary/10 p-5 rounded-2xl text-brand-primary group-hover:scale-110 transition-transform duration-300">
+                    <Zap size={36} />
+                </div>
+                <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-text-on-ice font-display mb-3">Urgencias 24hs</h3>
+                    <p className="text-text-muted-ice leading-relaxed mb-6 md:mb-0 text-base">
+                        Prioridad absoluta para familias con niños, adultos mayores y comercios. Cuando el calor aprieta, nosotros corremos.
+                    </p>
+                </div>
+                <button 
+                    onClick={() => window.open('https://wa.me/123456789')}
+                    className="shrink-0 bg-brand-dark text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-primary transition-colors flex items-center gap-2 shadow-lg shadow-brand-dark/20"
+                >
+                    Consultar Ahora <ArrowRight size={18} />
+                </button>
+            </div>
+          </div>
+
+          {/* Card 2: Herramientas - Blanca Limpia */}
+          <div className="bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-center hover:-translate-y-1 transition-all duration-300 group">
+            <div className="bg-slate-50 w-14 h-14 rounded-2xl flex items-center justify-center text-slate-600 mb-6 group-hover:bg-brand-accent/10 group-hover:text-brand-accent transition-colors">
+              <Wrench size={28} />
+            </div>
+            <h4 className="text-xl font-bold text-text-on-ice font-display mb-2">Tecnología de Punta</h4>
+            <p className="text-sm text-text-muted-ice leading-relaxed">
+              Bomba de vacío, nitrógeno y scanners digitales. Diagnósticos precisos que ahorran dinero.
+            </p>
+          </div>
+
+          {/* Card 3: Zona - Blanca Limpia */}
+          <div className="bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-center hover:-translate-y-1 transition-all duration-300 group">
+            <div className="bg-slate-50 w-14 h-14 rounded-2xl flex items-center justify-center text-slate-600 mb-6 group-hover:bg-brand-accent/10 group-hover:text-brand-accent transition-colors">
+              <MapPin size={28} />
+            </div>
+            <h4 className="text-xl font-bold text-text-on-ice font-display mb-2">Locales en Zona Oeste</h4>
+            <p className="text-sm text-text-muted-ice leading-relaxed">
+              Castelar, Morón, Ituzaingó. Al estar cerca, llegamos más rápido y con menores costos de traslado.
+            </p>
+          </div>
+
+           {/* Card 4: Contacto - Dark Gradient (El único toque oscuro para cerrar fuerte) */}
+          <div className="md:col-span-2 bg-linear-to-br from-brand-dark to-brand-primary rounded-3xl p-8 md:p-10 shadow-xl shadow-blue-900/20 relative overflow-hidden group">
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl font-bold text-white font-display mb-1">¿Tenés dudas técnicas?</h3>
+                <p className="text-blue-100 text-sm opacity-90">
+                  Mandanos foto de tu equipo y te orientamos sin cargo antes de la visita.
+                </p>
               </div>
-              <h3 className="text-3xl font-bold text-white mb-2 font-display">Urgencias 24hs</h3>
-              <p className="text-gray-300 max-w-sm text-lg">
-                Sabemos que el calor no espera. En temporada alta, priorizamos casos críticos.
-              </p>
-            </div>
-            
-            <button 
+              
+              <button 
                 onClick={() => window.open('https://wa.me/123456789')}
-                className="self-start mt-8 bg-brand-accent text-brand-dark px-8 py-3 rounded-xl text-sm font-bold hover:bg-white transition-colors cursor-pointer"
-            >
-              Consultar Disponibilidad
-            </button>
-          </div>
-
-          {/* Card Herramientas (Fondo Blanco) */}
-          <div className="bg-white rounded-3xl p-10 border border-slate-100 shadow-xl shadow-slate-200/50 flex flex-col items-center text-center justify-center hover:-translate-y-1 transition-transform duration-300">
-            <div className="bg-slate-50 p-4 rounded-full mb-6">
-              <Wrench className="text-brand-primary" size={40} />
-            </div>
-            <h4 className="text-text-on-ice font-bold text-xl mb-3 font-display">Herramientas Pro</h4>
-            <p className="text-text-muted-ice text-sm leading-relaxed">
-              Bomba de vacío, nitrógeno, manifold digital. Invertimos en tecnología.
-            </p>
-          </div>
-
-          {/* Card Zona (Fondo Blanco) */}
-          <div className="bg-white rounded-3xl p-10 border border-slate-100 shadow-xl shadow-slate-200/50 flex flex-col items-center text-center justify-center hover:-translate-y-1 transition-transform duration-300">
-            <div className="bg-slate-50 p-4 rounded-full mb-6">
-              <MapPin className="text-brand-primary" size={40} />
-            </div>
-            <h4 className="text-text-on-ice font-bold text-xl mb-3 font-display">Zona Oeste</h4>
-            <p className="text-text-muted-ice text-sm leading-relaxed">
-              Castelar, Ituzaingó, Morón, Padua. Llegamos rápido.
-            </p>
-          </div>
-
-           {/* Card Contacto (Fondo Cyan) */}
-          <div className="md:col-span-2 bg-brand-accent rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between shadow-xl shadow-cyan-500/20 relative overflow-hidden">
-            <div className="relative z-10 text-center md:text-left mb-6 md:mb-0">
-              <h3 className="text-3xl font-bold text-brand-dark mb-2 font-display">¿Tenés dudas técnicas?</h3>
-              <p className="text-brand-dark/80 font-medium text-lg">
-                Te asesoramos gratis por WhatsApp antes de ir.
-              </p>
+                className="bg-white text-brand-dark px-8 py-3 rounded-xl font-bold hover:bg-brand-highlight transition-all flex items-center gap-2 shadow-lg"
+              >
+                <Phone size={20} /> WhatsApp Directo
+              </button>
             </div>
             
-            <button 
-              onClick={() => window.open('https://wa.me/123456789')}
-              className="bg-brand-dark text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-brand-dark transition-all flex items-center gap-3 cursor-pointer shadow-lg z-10"
-            >
-              <Phone size={20} className="text-brand-accent" /> Escribinos
-            </button>
-            <div className="absolute -right-10 -bottom-20 opacity-10 pointer-events-none">
-                <Phone size={340} className='mb-20 mr-8 rotate-265 z-2'/>
+             {/* Decoración Icono Gigante */}
+            <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none transform translate-x-1/4 translate-y-1/4">
+                <Phone size={180} />
             </div>
           </div>
 
