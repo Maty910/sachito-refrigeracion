@@ -15,7 +15,7 @@ export const ServicesList = () => {
   };
 
   return (
-    <section id="expertis" className="py-24 bg-surface-ice relative w-full overflow-hidden">
+    <section id="servicios" className="py-24 bg-surface-ice relative w-full overflow-hidden">
       <div className="absolute top-0 right-50 w-150 h-150 bg-brand-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-50 w-150 h-150 bg-brand-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
 
