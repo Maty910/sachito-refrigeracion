@@ -6,7 +6,7 @@ export const GuaranteeSection = () => {
       
       {/* Volvemos al SVG original sin blur, ya que no era el problema */}
       <div className="absolute -right-20 -top-20 text-brand-dark opacity-5 pointer-events-none">
-        <ShieldCheck size={400} />
+        <ShieldCheck size={400} className="rotate-15 mt-12"/>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
