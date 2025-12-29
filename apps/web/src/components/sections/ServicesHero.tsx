@@ -34,8 +34,8 @@ export const ServicesHero = () => {
           </h1>
           
           <p className="text-xl text-text-muted max-w-2xl leading-relaxed border-l-4 border-brand-primary pl-6">
-            Desde instalaciones domésticas hasta reparaciones complejas de placas inverter. 
-            Acá tenés el detalle de todo lo que podemos hacer por tu equipo.
+            Desde instalaciones domésticas hasta reparaciones de Cámaras Frigoríficas y Sistemas Comerciales. 
+            <br /> <br />Acá tenés el detalle de todo lo que podemos hacer por tu equipo:
           </p>
         </div>
       </div>
