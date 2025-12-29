@@ -2,7 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { AppRouter } from './routes/AppRouter';
-import { FloatingWhatsApp } from './components/ui/FloatingWhatsapp';
+import { FloatingWhatsApp } from './components/ui/FloatingWhatsApp';
 import { ScrollToTop } from './components/layout/ScrollToTop';
 
 const App = () => {
