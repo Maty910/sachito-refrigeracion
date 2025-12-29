@@ -17,7 +17,7 @@ export const AboutSection = () => {
             </h2>
             <p className="text-text-muted-ice text-lg leading-relaxed mb-6">
               Sachito Refrigeración nació en Castelar con una misión simple: terminar con los técnicos que no cumplen. 
-              Somos un equipo de profesionales matriculados apasionados por la ingeniería y el detalle.
+              Somos un equipo de Técnicos Especializados apasionados por la prolijidad y el detalle.
             </p>
             <p className="text-text-muted-ice text-lg leading-relaxed mb-8">
               No solo arreglamos aires acondicionados; cuidamos el confort de tu hogar como si fuera el nuestro. 
