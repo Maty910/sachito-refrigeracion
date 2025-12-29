@@ -3,11 +3,11 @@ import { ProcessSteps } from '../components/sections/ProcessSteps';
 import { GuaranteeSection } from '../components/sections/GuaranteeSection';
 import { FAQSection } from '../components/sections/FAQSection';
 import { ServicesHero } from '../components/sections/ServicesHero';
-import { BrandsSection } from '../components/sections/BrandsSection'; // <--- Importamos la nueva sección
+import { BrandsSection } from '../components/sections/BrandsSection';
 
 export const ServicesPage = () => {
   return (
-    <div>
+    <div className="w-full overflow-x-hidden">
       <ServicesHero />     {/* Oscuro */}
       <ServicesList />     {/* Claro (Ice) */}
       <GuaranteeSection /> {/* Oscuro (Brand Dark) */}
