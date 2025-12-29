@@ -27,7 +27,7 @@ export const AboutSection = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="text-brand-primary shrink-0" />
-                <span className="text-text-on-ice font-medium">Matrícula al día en CACAAV</span>
+                <span className="text-text-on-ice font-medium">Técnicos Especializados</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="text-brand-primary shrink-0" />
