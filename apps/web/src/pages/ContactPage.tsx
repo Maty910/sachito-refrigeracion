@@ -12,7 +12,7 @@ export const ContactPage = () => {
             Estamos Cerca
           </span>
           <h1 className="text-4xl md:text-6xl font-bold text-text-main mb-6">
-            Contactanos
+            Contáctanos
           </h1>
           <p className="text-text-muted max-w-2xl mx-auto text-lg">
             ¿Tenés una urgencia o querés coordinar un mantenimiento? 
@@ -88,7 +88,7 @@ export const ContactPage = () => {
           {/* Columna Derecha: Formulario */}
           <div className="bg-surface-dark border border-white/5 p-8 md:p-10 rounded-3xl shadow-2xl">
             <h3 className="text-2xl font-bold text-text-main mb-2 font-display">Mandanos un mensaje</h3>
-            <p className="text-text-muted mb-8 text-sm">Te derivamos directo al WhatsApp técnico.</p>
+            <p className="text-text-muted mb-8 text-sm">Te derivamos directo al WhatsApp técnico. Recordá adjuntar fotos con tu consulta.</p>
 
             <form 
               className="space-y-6" 
@@ -112,11 +112,11 @@ export const ContactPage = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-brand-accent uppercase mb-2 ml-1">Teléfono</label>
+                <label className="block text-xs font-bold text-brand-accent uppercase mb-2 ml-1">Ubicación</label>
                 <input 
-                  name="phone"
-                  type="tel" 
-                  placeholder="Ej: 11 5555-5555"
+                  name="location"
+                  type="text" 
+                  placeholder="Ej: Castelar Norte"
                   className="w-full bg-surface-card border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-all placeholder:text-gray-600"
                   required
                 />
@@ -137,7 +137,7 @@ export const ContactPage = () => {
                 type="submit"
                 className="w-full bg-brand-accent text-brand-dark font-bold py-4 rounded-xl hover:bg-brand-highlight hover:shadow-lg hover:shadow-cyan-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
-                Enviar Mensaje <ArrowRight size={20} />
+                Enviar Mensaje de WhatsApp<ArrowRight size={20} />
               </button>
             </form>
           </div>
