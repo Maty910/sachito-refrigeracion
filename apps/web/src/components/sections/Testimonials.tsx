@@ -24,6 +24,30 @@ const REVIEWS = [
     text: "Hacemos el mantenimiento de los aires del local con ellos hace 2 años. Siempre responden rápido y con factura A. Profesionales serios.",
     stars: 5,
     date: "Hace 3 meses"
+  }, 
+  {
+    id: 4,
+    name: "Sofía Mendez",
+    location: "Cliente en Padua",
+    text: "Muy conforme con el trabajo realizado. El técnico fue amable y resolvió el problema en poco tiempo. Volveré a contactarlos para futuros mantenimientos.",
+    stars: 4,
+    date: "Hace 2 semanas"
+  }, 
+  {
+    id: 5,
+    name: "Javier López",
+    location: "Cliente en Hurlingham",
+    text: "Servicio rápido y eficiente. Me explicaron todo el proceso y dejaron todo limpio. El aire funciona mejor que nunca.",
+    stars: 5,
+    date: "Hace 1 mes"
+  }, 
+  {
+    id: 6,
+    name: "Ana Torres",
+    location: "Cliente en Castelar",
+    text: "Muy profesionales y atentos. Me ayudaron a elegir el mejor equipo para mi casa y la instalación fue impecable. Los recomiendo sin dudar.",
+    stars: 5,
+    date: "Hace 2 meses"
   }
 ];
 
