@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, ArrowRight, Clock } from 'lucide-react';
+import castelarMap from '../assets/images/castelar-map.png';
 
 export const ContactPage = () => {
   return (
@@ -71,12 +72,12 @@ export const ContactPage = () => {
                 className="block w-full h-full"
               >
                 <img 
-                  src="../assets/imgs/mapa castelar.png"
+                  src={castelarMap}
                   alt="Mapa de Castelar, Buenos Aires"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-brand-primary/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
-                  <p className="text-brand-accent font-bold flex items-center gap-2">
+                  <p className="text-brand-accent font-bold flex items-center gap-2 bg-brand-dark px-4 py-2 rounded-full">
                     <MapPin /> Ver en Google Maps
                   </p>
                 </div>

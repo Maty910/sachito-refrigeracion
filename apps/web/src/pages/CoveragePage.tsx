@@ -1,4 +1,5 @@
 import { MapPin, CheckCircle2, Navigation, AlertTriangle } from 'lucide-react';
+import castelarMap from '../assets/images/castelar-map.png';
 
 export const CoveragePage = () => {
   const zones = [
@@ -76,17 +77,17 @@ export const CoveragePage = () => {
             <div className="sticky top-32">
               <div className="aspect-square md:aspect-video w-full bg-surface-dark rounded-3xl border border-white/10 relative overflow-hidden group">
                 
-                {/* Fondo de Mapa (Imagen estática de Google Maps estilizada o placeholder) */}
-                {/* Podes cambiar esta URL por una captura real de tu zona en Google Maps snazzy maps */}
+                {/* Google Maps snazzy maps */}
                 <div 
-                  className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop')] bg-cover bg-center opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700 transform group-hover:scale-105"
+                  style={{ backgroundImage: `url(${castelarMap})` }}
+                  className="absolute inset-0 bg-cover bg-center opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700 transform group-hover:scale-105"
                 ></div>
                 
                 {/* Overlay Gradiente */}
                 <div className="absolute inset-0 bg-linear-to-t from-brand-dark via-transparent to-transparent"></div>
 
                 {/* Marcador Central (Base) */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+                <div className="absolute top-1/5 left-2/4 -translate-x-1/2 -translate-y-1/2 text-center">
                   <div className="relative">
                     <div className="w-4 h-4 bg-brand-accent rounded-full animate-ping absolute top-0 left-0"></div>
                     <div className="w-4 h-4 bg-brand-accent rounded-full relative z-10 border-2 border-brand-dark"></div>
