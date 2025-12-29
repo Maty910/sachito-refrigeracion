@@ -12,15 +12,15 @@ const FAQS = [
   },
   {
     question: "¿Cuál es la demora para un turno?",
-    answer: "En temporada baja (Invierno) solemos tener disponibilidad en 24/48hs. En temporada alta (Verano) recomendamos reservar con 3 a 5 días de anticipación. Las urgencias tienen un recargo especial."
+    answer: "En temporada baja (Invierno) solemos tener disponibilidad en 24/48hs. En temporada alta (Verano) recomendamos reservar con 3 a 5 días de anticipación."
   },
   {
     question: "¿Instalan equipos usados?",
-    answer: "Sí, realizamos instalaciones de equipos usados, pero requerimos una revisión previa del equipo para garantizar que esté en condiciones y poder darte nuestra garantía de instalación."
+    answer: "Sí, realizamos instalaciones de equipos usados, pero requerimos una revisión previa del equipo para garantizar que esté en condiciones."
   },
   {
     question: "¿Entregan factura?",
-    answer: "Sí, por supuesto. Somos un servicio técnico matriculado y emitimos factura C por todos nuestros trabajos. Los presupuestos enviados incluyen IVA."
+    answer: "Sí, por supuesto. Somos un servicio técnico matriculado y emitimos factura C por todos nuestros trabajos."
   }
 ];
 
@@ -32,7 +32,7 @@ export const FAQSection = () => {
   };
 
   return (
-    // Fondo OSCURO para contrastar con la sección de Garantía (que es clara)
+    // CAMBIO: Volvimos a bg-surface-dark (Oscuro)
     <section className="py-24 bg-surface-dark border-t border-white/5 relative overflow-hidden">
       
       {/* Decoración sutil de fondo */}
@@ -44,7 +44,7 @@ export const FAQSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           
-          {/* Columna Izquierda: Título y Bajada */}
+          {/* Columna Izquierda */}
           <div className="lg:col-span-5 lg:sticky lg:top-32">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-brand-accent text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-sm">
               <HelpCircle size={14} />
@@ -58,14 +58,14 @@ export const FAQSection = () => {
               Queremos que contrates con total tranquilidad. Acá te dejamos las respuestas a lo que más nos preguntan nuestros clientes.
             </p>
             <button 
-              onClick={() => window.open('https://wa.me/+5491123376861?text=Hola!%20Quisiera%20consultar%20respecto%20al%20servicio%20de%20refrigeración')}
+              onClick={() => window.open('https://wa.me/123456789')}
               className="hidden lg:inline-flex text-brand-accent font-bold items-center gap-2 hover:text-brand-highlight transition-colors"
             >
               ¿Tenés otra duda? Escribinos al WhatsApp
             </button>
           </div>
 
-          {/* Columna Derecha: Acordeón */}
+          {/* Columna Derecha: Acordeón Dark */}
           <div className="lg:col-span-7 space-y-4">
             {FAQS.map((faq, index) => (
               <div 
@@ -84,7 +84,7 @@ export const FAQSection = () => {
                     {faq.question}
                   </h3>
                   <div className={`
-                    w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 shrink-0
+                    w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0
                     ${openIndex === index ? 'bg-brand-accent text-brand-dark rotate-180' : 'bg-white/10 text-text-muted'}
                   `}>
                     {openIndex === index ? <Minus size={16} /> : <Plus size={16} />}
@@ -103,7 +103,7 @@ export const FAQSection = () => {
               </div>
             ))}
             
-            {/* Botón visible solo en mobile */}
+            {/* Botón mobile */}
             <div className="lg:hidden mt-8 text-center">
               <button 
                 onClick={() => window.open('https://wa.me/123456789')}

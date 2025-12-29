@@ -56,7 +56,7 @@ export const ServicesList = () => {
               <div className="flex flex-col md:flex-row gap-8 md:items-center justify-between relative z-10">
                 <div className="flex items-start gap-6">
                   {/* ID */}
-                  <span className={`text-3xl font-display font-bold transition-colors ${!isServicePage ? 'text-brand-primary/20 group-hover:text-brand-primary' : 'text-brand-primary/20'}`}>
+                  <span className={`text-3xl font-display font-bold transition-colors ${!isServicePage ? 'text-brand-primary group-hover:text-brand-primary/50' : 'text-brand-primary '}`}>
                     {item.id}
                   </span>
                   

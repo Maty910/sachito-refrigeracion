@@ -3,7 +3,6 @@ import { HomePage } from '../pages/HomePage';
 import { ContactPage } from '../pages/ContactPage';
 import { ServicesPage } from '../pages/ServicesPage';
 import { CoveragePage } from '../pages/CoveragePage';
-// Más adelante importás otras páginas acá, ej: import { ContactPage } from '../pages/ContactPage';
 
 export const AppRouter = () => {
   return (
