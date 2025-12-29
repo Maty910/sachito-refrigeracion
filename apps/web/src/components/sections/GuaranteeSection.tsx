@@ -31,9 +31,9 @@ export const GuaranteeSection = () => {
             <div className="bg-brand-primary/20 w-14 h-14 rounded-xl flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
               <ShieldCheck size={32} />
             </div>
-            <h3 className="text-xl font-bold text-white mb-3 font-display">1 Año de Garantía</h3>
+            <h3 className="text-xl font-bold text-white mb-3 font-display">90 días de Garantía</h3>
             <p className="text-text-muted text-sm">
-              En todas nuestras instalaciones completas. Si falla la instalación, volvemos sin cargo.
+              En todas nuestras instalaciones completas. Si falla la instalación, volvemos y lo reparamos sin cargo.
             </p>
           </div>
 
@@ -42,9 +42,9 @@ export const GuaranteeSection = () => {
             <div className="bg-brand-primary/20 w-14 h-14 rounded-xl flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
               <Award size={32} />
             </div>
-            <h3 className="text-xl font-bold text-white mb-3 font-display">Matrícula CACAAV</h3>
+            <h3 className="text-xl font-bold text-white mb-3 font-display">Técnicos Especializados</h3>
             <p className="text-text-muted text-sm">
-              Técnicos certificados por la Cámara Argentina de Calefacción, Aire Acondicionado y Ventilación.
+              Técnicos certificados el Ministerio de Educación.
             </p>
           </div>
 
@@ -66,7 +66,7 @@ export const GuaranteeSection = () => {
             </div>
             <h3 className="text-xl font-bold text-white mb-3 font-display">Materiales de 1ra</h3>
             <p className="text-text-muted text-sm">
-              Solo usamos caños de cobre normalizados y cables aprobados. Lo barato sale caro.
+              Solo usamos caños de cobre y cables normalizados.
             </p>
           </div>
         </div>
