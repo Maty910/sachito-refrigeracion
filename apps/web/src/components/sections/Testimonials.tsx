@@ -3,47 +3,47 @@ import { Star, Quote } from 'lucide-react';
 const REVIEWS = [
   {
     id: 1,
-    name: "Martín Rodriguez",
-    location: "Cliente en Morón",
+    name: "Fede C",
+    location: "Cliente en Haedo",
     text: "Excelente servicio. Llegaron puntuales (algo raro hoy en día) y me explicaron todo lo que le pasaba al equipo. Quedó enfriando perfecto.",
     stars: 5,
-    date: "Hace 2 semanas"
+    date: "Hace 3 semanas"
   },
   {
     id: 2,
-    name: "Laura G.",
-    location: "Cliente en Castelar",
+    name: "Laura J.",
+    location: "Cliente en Padua",
     text: "Los llamé por una urgencia porque el aire tiraba agua. Lo solucionaron en el día y dejaron todo impecable. Súper recomendables.",
     stars: 5,
     date: "Hace 1 mes"
   },
   {
     id: 3,
-    name: "Comercio 'El Parque'",
-    location: "Ituzaingó",
-    text: "Hacemos el mantenimiento de los aires del local con ellos hace 2 años. Siempre responden rápido y con factura A. Profesionales serios.",
+    name: "Comercio 'Barbería lo de Chacho'",
+    location: "Cliente en Castelar",
+    text: "Hacemos el mantenimiento de los aires del local con ellos hace 2 años. Siempre responden rápido. Profesionales serios.",
     stars: 5,
     date: "Hace 3 meses"
   }, 
   {
     id: 4,
-    name: "Sofía Mendez",
-    location: "Cliente en Padua",
-    text: "Muy conforme con el trabajo realizado. El técnico fue amable y resolvió el problema en poco tiempo. Volveré a contactarlos para futuros mantenimientos.",
-    stars: 4,
+    name: "Joaquín M.",
+    location: "Cliente en Castelar",
+    text: "Muy conforme con el trabajo realizado. El aire estaba quemado por un rayo hace años y lo reparó en el día. Volveré a contactarlos para futuros mantenimientos.",
+    stars: 5,
     date: "Hace 2 semanas"
   }, 
   {
     id: 5,
-    name: "Javier López",
-    location: "Cliente en Hurlingham",
+    name: "Delfi R.",
+    location: "Cliente en Floresta",
     text: "Servicio rápido y eficiente. Me explicaron todo el proceso y dejaron todo limpio. El aire funciona mejor que nunca.",
     stars: 5,
-    date: "Hace 1 mes"
+    date: "Hace 2 meses"
   }, 
   {
     id: 6,
-    name: "Ana Torres",
+    name: "Gabriela G.",
     location: "Cliente en Castelar",
     text: "Muy profesionales y atentos. Me ayudaron a elegir el mejor equipo para mi casa y la instalación fue impecable. Los recomiendo sin dudar.",
     stars: 5,
