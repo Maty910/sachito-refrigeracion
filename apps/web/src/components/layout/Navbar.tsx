@@ -35,22 +35,19 @@ export const Navbar = () => {
       // Si vamos al inicio sin hash, subimos al tope
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  }, [location]); // Se ejecuta cada vez que cambia la ruta o el hash
+  }, [location]);
 
-  // 2. Componente NavLink Mejorado
   const NavLink = ({ to, label }: { to: string, label: string }) => {
     const isActive = activeSection === to;
     
     return (
       <Link 
         to={to} 
-        // Agregamos 'group' para controlar el hover de los hijos (la barrita)
         className={`group relative text-sm font-medium transition-colors duration-300 py-1 ${
           isActive ? 'text-white' : 'text-text-muted hover:text-brand-accent'
         }`}
       >
         {label}
-        {/* La Barrita: Se muestra si está activo O si hacemos hover (group-hover) */}
         <span 
           className={`absolute -bottom-1 left-0 w-full h-1 bg-brand-accent rounded-full transform transition-transform duration-300 ease-out origin-left ${
             isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
@@ -79,8 +76,9 @@ export const Navbar = () => {
           <div className="flex gap-8">
             <NavLink to="/#nosotros" label="Nosotros" />
             <NavLink to="/servicios" label="Servicios" />
-            <NavLink to="/cobertura" label="Cobertura" />
+            <NavLink to="/zonas-de-cobertura" label="Cobertura" />
             <NavLink to="/#garantia" label="Garantía" />
+            <NavLink to="/#testimonios" label="Testimonios" />
           </div>
           
           <button 
