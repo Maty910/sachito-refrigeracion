@@ -51,7 +51,7 @@ export const Footer = () => {
                   </span>
                 </h2>
                 <p className="text-text-muted text-lg leading-relaxed">
-                    Diagnósticos precisos, repuestos originales y la tranquilidad de contratar a un matriculado.
+                    Diagnósticos precisos, repuestos originales y la tranquilidad de contratar a un Técnico Especializado.
                 </p>
             </div>
 
@@ -84,9 +84,9 @@ export const Footer = () => {
                   <MapPin className="shrink-0 mt-1 text-brand-accent" size={20} />
                   <p className="leading-relaxed">Base Operativa en Castelar.<br/>Cobertura en todo Zona Oeste.</p>
               </div>
-              <a href="mailto:hola@sachito.ref" className="flex items-center gap-3 text-text-muted hover:text-white transition-colors">
+              <a href="mailto:sachitorefrigeracion.sc@gmail.com" className="flex items-center gap-3 text-text-muted hover:text-white transition-colors">
                   <Mail className="shrink-0 text-brand-accent" size={20} />
-                  hola@sachito.ref
+                  sachitorefrigeracion.sc@gmail.com
               </a>
             </div>
 
@@ -105,10 +105,10 @@ export const Footer = () => {
             <div>
               <h4 className="text-white font-bold mb-6 font-display text-lg">Especialidades</h4>
               <ul className="space-y-4 text-text-muted">
-                  <li><span className="cursor-default hover:text-white transition-colors">Instalación Split / Multisplit</span></li>
-                  <li><span className="cursor-default hover:text-white transition-colors">Reparación de Placas</span></li>
-                  <li><span className="cursor-default hover:text-white transition-colors">Cargas de Gas R410/R32</span></li>
-                  <li><span className="cursor-default hover:text-white transition-colors">Mantenimiento Preventivo</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Instalación Split / Multisplit / PisoTecho</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Vehículos</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Cargas de Gas</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Limpieza Preventivo</span></li>
               </ul>
             </div>
 
