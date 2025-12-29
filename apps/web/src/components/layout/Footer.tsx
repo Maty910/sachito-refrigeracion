@@ -63,7 +63,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="group relative flex items-center justify-center gap-3 bg-white text-brand-dark px-8 py-5 rounded-2xl font-bold text-xl hover:bg-brand-highlight transition-all duration-300 shadow-2xl shadow-black/20"
               >
-                <WhatsAppIcon /> Pedir Presupuesto
+                <WhatsAppIcon /> Agendar visita ahora
                 <ArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
               </a>
               <p className="text-center text-sm text-text-muted mt-2">
