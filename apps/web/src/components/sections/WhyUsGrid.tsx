@@ -55,7 +55,7 @@ export const WhyUsGrid = () => {
             </div>
             <h4 className="text-xl font-bold text-text-on-ice font-display mb-2">Tecnología de Punta</h4>
             <p className="text-sm text-text-muted-ice leading-relaxed">
-              Bomba de vacío, nitrógeno y scanners digitales. Diagnósticos precisos que ahorran dinero.
+              Bomba de vacío o nitrógeno. Diagnósticos precisos que ahorran dinero.
             </p>
           </div>
 
@@ -71,18 +71,18 @@ export const WhyUsGrid = () => {
           </div>
 
            {/* Card 4: Contacto - Dark Gradient (El único toque oscuro para cerrar fuerte) */}
-          <div className="md:col-span-2 bg-linear-to-br from-brand-dark to-brand-primary rounded-3xl p-8 md:p-10 shadow-xl shadow-blue-900/20 relative overflow-hidden group">
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="md:col-span-2 bg-linear-to-br from-brand-dark to-brand-primary rounded-3xl p-8 md:p-10 shadow-xl shadow-blue-900/20 relative overflow-hidden group ">
+            <div className="relative z-10 flex flex-col md:flex-col items-center justify-between gap-6">
               <div className="text-center md:text-left">
                 <h3 className="text-2xl font-bold text-white font-display mb-1">¿Tenés dudas técnicas?</h3>
                 <p className="text-blue-100 text-sm opacity-90">
-                  Mandanos foto de tu equipo y te orientamos sin cargo antes de la visita.
+                  Mandanos foto de tu equipo y te asesoramos sin cargo antes de la visita.
                 </p>
               </div>
               
               <button 
-                onClick={() => window.open('https://wa.me/123456789')}
-                className="bg-white text-brand-dark px-8 py-3 rounded-xl font-bold hover:bg-brand-highlight transition-all flex items-center gap-2 shadow-lg"
+                onClick={() => window.open('https://wa.me/+5491123376861?text=Hola!%20Quisiera%20consultar%20sobre%20mi%20equipo')}
+                className="bg-white text-brand-dark px-8 py-3 rounded-xl font-bold hover:bg-brand-highlight transition-all flex items-center gap-2 shadow-lg w-full md:w-auto justify-center"
               >
                 <Phone size={20} /> WhatsApp Directo
               </button>
