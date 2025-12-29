@@ -1,6 +1,9 @@
 import { ArrowUpRight, ShieldCheck } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen pt-32 pb-20 flex flex-col justify-center bg-brand-dark overflow-hidden">
       <div className="absolute top-0 right-0 w-150 h-150 bg-brand-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
@@ -10,7 +13,6 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-12 gap-12 items-end">
           
           <div className="lg:col-span-8">
-            {/* Badge: Ajustado a brand-accent */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-brand-highlight text-xs font-bold tracking-widest uppercase mb-8 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
               Disponible en Zona Oeste
@@ -18,7 +20,6 @@ export const Hero = () => {
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-text-main leading-[0.9] tracking-tight mb-8 font-display">
               CLIMA <br/>
-              {/* Gradiente usando las variables de marca */}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-accent to-brand-highlight">
                 PERFECTO
               </span>.
@@ -37,7 +38,11 @@ export const Hero = () => {
                 Solicitar Visita 
                 <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
-              <button className="px-8 py-4 rounded-lg font-bold text-white border border-white/20 hover:bg-white/5 transition-all cursor-pointer">
+
+              <button 
+                onClick={() => navigate('/zona-de-cobertura')}
+                className="px-8 py-4 rounded-lg font-bold text-white border border-white/20 hover:bg-white/5 transition-all cursor-pointer"
+              >
                 Ver Zona de Cobertura
               </button>
             </div>
@@ -45,7 +50,6 @@ export const Hero = () => {
 
           <div className="lg:col-span-4 lg:mb-4">
             <div className="grid grid-cols-2 gap-4">
-               {/* Stats Cards */}
               <div className="bg-surface-card/50 backdrop-blur-sm p-6 rounded-2xl border border-white/10 hover:border-brand-accent/30 transition-colors">
                 <p className="text-3xl font-bold text-text-main mb-1 font-display">+500</p>
                 <p className="text-xs text-text-muted uppercase tracking-wider">Instalaciones</p>
@@ -55,7 +59,6 @@ export const Hero = () => {
                 <p className="text-xs text-text-muted uppercase tracking-wider">Garantía</p>
               </div>
               
-               {/* Matriculado Card: bg-[#1a1f4d] -> bg-surface-card */}
               <div className="col-span-2 bg-surface-card p-6 rounded-2xl border border-brand-primary/30 flex items-center gap-4">
                 <div className="bg-brand-primary/20 p-3 rounded-full text-brand-accent">
                   <ShieldCheck />
