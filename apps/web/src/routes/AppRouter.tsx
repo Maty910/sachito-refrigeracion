@@ -8,7 +8,7 @@ export const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/zona-de-cobertura" element={<CoveragePage />} />
+      <Route path="/zonas-de-cobertura" element={<CoveragePage />} />
       <Route path="/contacto" element={<ContactPage />} />
       <Route path="/servicios" element={<ServicesPage />} />
       <Route path="/*" element={<Navigate to="/" />} />

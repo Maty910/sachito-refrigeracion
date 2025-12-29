@@ -59,11 +59,11 @@ export const Hero = () => {
               </button>
 
               <button 
-                onClick={() => navigate('/cobertura')}
+                onClick={() => navigate('/zonas-de-cobertura')}
                 className="px-8 py-4 rounded-xl font-bold text-white border border-white/10 hover:bg-white/5 transition-all flex items-center justify-center gap-2 hover:border-brand-accent/50 cursor-pointer"
               >
                 <MapPin size={20} className="text-brand-accent" />
-                Ver Zonas
+                Ver Zonas de Cobertura
               </button>
             </div>
             
