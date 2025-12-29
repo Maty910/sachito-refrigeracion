@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     question: "¿Entregan factura?",
-    answer: "Sí, por supuesto. Somos un servicio técnico matriculado y emitimos factura C por todos nuestros trabajos."
+    answer: "Sí, por supuesto. Somos un servicio Técnico Especializado y emitimos factura C por todos nuestros trabajos."
   }
 ];
 
