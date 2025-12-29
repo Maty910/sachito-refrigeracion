@@ -66,7 +66,7 @@ export const Testimonials = () => {
               {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
             </span>
             <span className="font-bold text-text-on-ice">4.9/5</span>
-            <span>en Google Reviews</span>
+            <span>en Reseñas de clientes</span>
           </div>
         </div>
 
