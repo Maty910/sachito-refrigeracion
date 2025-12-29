@@ -84,7 +84,7 @@ export const FAQSection = () => {
                     {faq.question}
                   </h3>
                   <div className={`
-                    w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0
+                    w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 shrink-0
                     ${openIndex === index ? 'bg-brand-accent text-brand-dark rotate-180' : 'bg-white/10 text-text-muted'}
                   `}>
                     {openIndex === index ? <Minus size={16} /> : <Plus size={16} />}
