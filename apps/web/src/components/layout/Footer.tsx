@@ -73,7 +73,7 @@ export const Footer = () => {
         </div>
 
         {/* 2. GRILLA DE NAVEGACIÓN */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20 justify-center ml-15">
             
             {/* Columna 1: Marca y Ubicación */}
             <div className="space-y-6">
@@ -82,7 +82,7 @@ export const Footer = () => {
               </span>
               <div className="flex items-start gap-3 text-text-muted">
                   <MapPin className="shrink-0 mt-1 text-brand-accent" size={20} />
-                  <p className="leading-relaxed">Base Operativa en Castelar.<br/>Cobertura en todo Zona Oeste.</p>
+                  <p className="leading-relaxed">Base Operativa en Castelar.<br/>Cobertura en todo Zona Oeste y CABA (Consultar zonas específicas).</p>
               </div>
               <a href="mailto:sachitorefrigeracion.sc@gmail.com" className="flex items-center gap-3 text-text-muted hover:text-white transition-colors">
                   <Mail className="shrink-0 text-brand-accent" size={20} />
@@ -91,7 +91,7 @@ export const Footer = () => {
             </div>
 
             {/* Columna 2: Links */}
-            <div>
+            <div className="ml-15">
               <h4 className="text-white font-bold mb-6 font-display text-lg">Secciones</h4>
               <ul className="space-y-4 text-text-muted">
                   <li><Link to="/" className="hover:text-brand-accent transition-colors">Inicio</Link></li>
@@ -105,10 +105,10 @@ export const Footer = () => {
             <div>
               <h4 className="text-white font-bold mb-6 font-display text-lg">Especialidades</h4>
               <ul className="space-y-4 text-text-muted">
-                  <li><span className="cursor-default hover:text-white transition-colors">Instalación Split / Multisplit / PisoTecho</span></li>
-                  <li><span className="cursor-default hover:text-white transition-colors">Vehículos</span></li>
-                  <li><span className="cursor-default hover:text-white transition-colors">Cargas de Gas</span></li>
-                  <li><span className="cursor-default hover:text-white transition-colors">Limpieza Preventivo</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Instalación y Reparación Split / Multisplit / PisoTecho</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Heladeras / Freezers</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Exhibidoras / Mostrador</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Refrigeración del Transporte</span></li>
               </ul>
             </div>
 
@@ -130,8 +130,9 @@ export const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-muted opacity-60">
           <p>© {new Date().getFullYear()} Sachito Refrigeración. Todos los derechos reservados.</p>
           <div className="flex gap-6">
-            <span className="hover:text-white cursor-pointer">Matrícula CACAAV al día</span>
+            <span className="hover:text-white cursor-pointer">Técnico Especializado</span>
             <span className="hover:text-white cursor-pointer">Garantía Escrita</span>
+
           </div>
         </div>
       </div>
