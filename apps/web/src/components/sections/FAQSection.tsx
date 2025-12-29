@@ -33,7 +33,7 @@ export const FAQSection = () => {
 
   return (
     // CAMBIO: Volvimos a bg-surface-dark (Oscuro)
-    <section className="py-24 bg-surface-dark border-t border-white/5 relative overflow-hidden">
+    <section className="py-24 bg-surface-dark border-t border-white/5 relative overflow-hidden" id='dudas'>
       
       {/* Decoración sutil de fondo */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
