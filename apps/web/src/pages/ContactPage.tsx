@@ -46,7 +46,7 @@ export const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-sm text-text-muted font-bold uppercase">Zona de Cobertura</p>
-                    <p className="text-lg text-white">Castelar, Morón, Ituzaingó, Padua</p>
+                    <p className="text-lg text-white">Zona Oeste y CABA (Consultar zonas específicas)</p>
                   </div>
                 </div>
 
@@ -56,8 +56,8 @@ export const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-sm text-text-muted font-bold uppercase">Horarios</p>
-                    <p className="text-lg text-white">Lun a Vie: 08:00 - 19:00hs</p>
-                    <p className="text-sm text-text-muted">Sábados: Guardias pasivas</p>
+                    <p className="text-lg text-white">Lun a Sab: 08:00 - 22:00hs</p>
+                    <p className="text-sm text-text-muted">Domingos: Guardias</p>
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export const ContactPage = () => {
               onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
                 e.preventDefault();
                 const formData = new FormData(e.currentTarget);
-                const text = `Hola! Soy ${formData.get('name')}. Mi consulta es: ${formData.get('message')}`;
+                const text = `Hola! Soy ${formData.get('name')}. Mi consulta es: ${formData.get('message')} y estoy ubicado en ${formData.get('location')}.`;
                 window.open(`https://wa.me/+5491123376861?text=${encodeURIComponent(text)}`);
               }}
             >
@@ -127,7 +127,7 @@ export const ContactPage = () => {
                 <textarea 
                   name="message"
                   rows={4}
-                  placeholder="Hola, necesito instalar un aire..."
+                  placeholder="Necesito instalar un aire..."
                   className="w-full bg-surface-card border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-all placeholder:text-gray-600 resize-none"
                   required
                 ></textarea>
