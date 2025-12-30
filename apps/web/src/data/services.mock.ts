@@ -17,13 +17,13 @@ export const SERVICES: ServiceItem[] = [
     id: '03',
     title: 'Carga de Gas & Fugas',
     desc: 'Detección de micro-fugas con nitrógeno a alta presión. Carga precisa por balanza digital.',
-    tags: ['R410a', 'R32', 'Ecológico', 'Sin Sobre-carga', 'Garantía 90 días', 'Fugas', 'Nitrógeno' ]
+    tags: ['R410a', 'R32', 'R134a', 'R22', 'R290', 'R600a', 'R404' ]
   },
   {
     id: '04',
     title: 'Limpieza Preventiva',
-    desc: 'Mantenimiento integral con desarme completo. Incluye limpieza de filtros, serpentines y drenajes para optimizar el rendimiento y la vida útil del equipo.',
-    tags: ['Anti-hongos', 'Ahorro Energía', 'Rendimiento Óptimo']
+    desc: 'Mantenimiento integral con desarme completo. Incluye limpieza de filtros, serpentinas y drenajes para optimizar el rendimiento y la vida útil del equipo.',
+    tags: ['Anti-hongos', 'Ahorro Energético', 'Mayor vida útil']
   },
   {
     id: '05',
@@ -34,7 +34,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: '06',
     title: 'Asesoramiento Personalizado',
-    desc: 'Te ayudamos a elegir el equipo que mejor se adapte a tus necesidades y presupuesto. Análisis de espacio, eficiencia energética y costos.',
-    tags: ['Asesoramiento', 'Eficiencia Energética', 'A Medida']
+    desc: 'Te ayudamos a elegir el equipo que mejor se adapte a tus necesidades y presupuesto. Análisis de espacio, costos y beneficios.',
+    tags: ['Eficiencia Energética', 'Sin gastar de más', 'Recomendaciones']
   }
 ];
