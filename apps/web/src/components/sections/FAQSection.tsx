@@ -8,7 +8,7 @@ const FAQS = [
   },
   {
     question: "¿Qué medios de pago aceptan?",
-    answer: "Para tu comodidad aceptamos Efectivo, Transferencia Bancaria y Mercado Pago. Consultanos por opciones con tarjeta de crédito."
+    answer: "Para tu comodidad aceptamos Efectivo, Transferencia Bancaria y Mercado Pago."
   },
   {
     question: "¿Cuál es la demora para un turno?",
@@ -19,8 +19,8 @@ const FAQS = [
     answer: "Sí, realizamos instalaciones de equipos usados, pero requerimos una revisión previa del equipo para garantizar que esté en condiciones."
   },
   {
-    question: "¿Entregan factura?",
-    answer: "Sí, por supuesto. Somos un servicio Técnico Especializado y emitimos factura C por todos nuestros trabajos."
+    question: "¿Ofrecen garantía por sus servicios?",
+    answer: "Sí, ofrecemos una garantía de 90 días en casi todas nuestras reparaciones e instalaciones, siempre y cuando se sigan las recomendaciones de uso y mantenimiento. Consulta los términos específicos al momento de contratar el servicio."
   }
 ];
 
