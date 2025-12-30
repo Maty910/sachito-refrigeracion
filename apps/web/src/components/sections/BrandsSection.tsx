@@ -3,7 +3,9 @@ import { CheckCircle2 } from 'lucide-react';
 const BRANDS = [
   "Surrey", "Carrier", "Samsung", "LG", 
   "Electra", "BGH", "Philco", "Midea",
-  "Hisense", "York", "Cardiff", "Rheem"
+  "Hisense", "York", "Cardiff", "Daikin",
+  "Noblex", "Whirlpool", "Drean",
+  "Sanyo", "Gafa", "Koh-i-noor"
 ];
 
 export const BrandsSection = () => {
@@ -30,6 +32,11 @@ export const BrandsSection = () => {
               <span className="group-hover:scale-105 transition-transform">{brand}</span>
             </div>
           ))}
+        </div>
+
+        {/* Texto adicional */}
+        <div className="text-center mb-12">
+          <p className="text-slate-500 italic">Y muchas marcas más...</p>
         </div>
 
         {/* Bajada de confianza */}
