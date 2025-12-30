@@ -1,4 +1,5 @@
 import { CheckCircle2 } from 'lucide-react';
+import homePhoto from '../../assets/images/home-photo.jpeg';
 
 export const AboutSection = () => {
   return (
@@ -46,9 +47,9 @@ export const AboutSection = () => {
             <div className="absolute inset-0 bg-brand-primary/10 rounded-3xl transform rotate-3 scale-105 -z-10"></div>
             
             <div className="aspect-4/3 rounded-3xl overflow-hidden border border-white shadow-2xl relative">
-              {/* Imagen de técnico trabajando (Unsplash) */}
+              {/* Imagen de técnico trabajando */}
               <img 
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80" 
+                src={homePhoto} 
                 alt="Técnico de Sachito trabajando" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
