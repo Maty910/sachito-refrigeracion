@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Snowflake, ArrowUpRight, Menu, X } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { SCLogo } from '../ui/SCLogo';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,15 +60,10 @@ export const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-white/10 transition-all">
-      <div className="container mx-auto px-6 h-20 flex justify-between items-center">
+      <div className="container mx-auto px-6 py-2 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center text-white group-hover:bg-brand-accent group-hover:text-brand-dark transition-all duration-300">
-            <Snowflake size={24} />
-          </div>
-          <span className="text-xl font-bold text-text-main tracking-wide font-display">
-            SACHITO<span className="text-brand-accent">.REF</span>
-          </span>
+        <Link to="/" className="group mr-12">
+          <SCLogo />
         </Link>
 
         {/* Desktop Links */}
