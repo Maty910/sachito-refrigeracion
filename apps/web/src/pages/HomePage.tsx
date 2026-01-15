@@ -3,7 +3,7 @@ import { HomeServices } from '../components/sections/HomeServices';
 import { WhyUsGrid } from '../components/sections/WhyUsGrid';
 import { AboutSection } from '../components/sections/AboutSection';
 import { GuaranteeSection } from '../components/sections/GuaranteeSection';
-import { Testimonials } from '../components/sections/Testimonials'; // <--- Importar
+import { Testimonials } from '../components/sections/Testimonials';
 import { ServicesList } from '../components/sections/ServicesList';
 
 export const HomePage = () => {
