@@ -23,7 +23,7 @@ const WhatsAppIcon = () => (
 
 export const Footer = () => {
   const phoneNumber = "+5491123376861";
-  const message = "Hola Sachito! Vi tu web y quería pedirte un presupuesto.";
+  const message = "Hola SC! Vi tu web y quería pedirte un presupuesto.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
@@ -127,7 +127,7 @@ export const Footer = () => {
 
         {/* 3. COPYRIGHT */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-muted opacity-60">
-          <p>© {new Date().getFullYear()} Sachito Refrigeración. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} SC Refrigeración. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <span className="hover:text-white cursor-pointer">Técnico Especializado</span>
             <span className="hover:text-white cursor-pointer">Garantía Escrita</span>
