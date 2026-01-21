@@ -40,7 +40,7 @@ export const WhyUsGrid = () => {
                     </p>
                 </div>
                 <button 
-                    onClick={() => window.open('https://wa.me/123456789')}
+                    onClick={() => window.open('https://wa.me/+5491123376861?text=Hola!%20Quisiera%20consultar%20sobre%20una%20urgencia')}
                     className="shrink-0 bg-brand-dark text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-primary transition-colors flex items-center gap-2 shadow-lg shadow-brand-dark/20"
                 >
                     Consultar Ahora <ArrowRight size={18} />
