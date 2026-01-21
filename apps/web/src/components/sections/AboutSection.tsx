@@ -17,7 +17,7 @@ export const AboutSection = () => {
               <span className="text-brand-accent">tus vecinos.</span>
             </h2>
             <p className="text-text-muted-ice text-lg leading-relaxed mb-6">
-              Sachito Refrigeración nació en Castelar con una misión simple: terminar con los técnicos que no cumplen. 
+              SC Refrigeración nació en Castelar con una misión simple: terminar con los técnicos que no cumplen. 
               Somos un equipo de Técnicos Especializados apasionados por la prolijidad y el detalle.
             </p>
             <p className="text-text-muted-ice text-lg leading-relaxed mb-8">
@@ -50,7 +50,7 @@ export const AboutSection = () => {
               {/* Imagen de técnico trabajando */}
               <img 
                 src={homePhoto} 
-                alt="Técnico de Sachito trabajando" 
+                alt="Técnico de SC trabajando" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
               
