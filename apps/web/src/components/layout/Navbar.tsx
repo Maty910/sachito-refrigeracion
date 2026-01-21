@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { SCLogo } from '../ui/SCLogo';
+// import { SCLogo } from '../ui/SCLogo';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
