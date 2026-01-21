@@ -43,7 +43,7 @@ export const Hero = () => {
             
             <p className="text-xl text-gray-300 max-w-xl leading-relaxed mb-10 font-light border-l-4 border-brand-accent pl-6">
               Olvidate del calor y de los técnicos que te dejan plantado. 
-              En Sachito.Ref combinamos <strong className="text-white font-bold">prolijidad</strong>, <strong className="text-white font-bold">puntualidad</strong> y <strong className="text-white font-bold">garantía escrita</strong>.
+              En SC Refrigeración combinamos <strong className="text-white font-bold">prolijidad</strong>, <strong className="text-white font-bold">puntualidad</strong> y <strong className="text-white font-bold">garantía escrita</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
