@@ -14,7 +14,7 @@ export const WhyUsGrid = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-text-on-ice font-display mb-6 tracking-tight">
             ¿Por qué elegir a <br/>
             <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary to-brand-accent">
-              Sachito.Ref?
+              SC Refrigeración?
             </span>
           </h2>
           <p className="text-text-muted-ice text-lg">
