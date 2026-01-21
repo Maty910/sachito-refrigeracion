@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 // import { SCLogo } from '../ui/SCLogo';
+import SCLogo from '../../assets/images/SC Refrigeracion logo.svg'; 
+
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +66,7 @@ export const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="group mr-12">
           {/* <SCLogo /> */}
-          <img src="./public/SC Refrigeracion logo.svg" alt="" className='w-65' />
+          <img src={SCLogo} alt="SC Refrigeracion Logo" className='w-65' />
         </Link>
 
         {/* Desktop Links */}
