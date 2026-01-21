@@ -21,7 +21,7 @@ export const ServicesList = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         {!isServicePage && (
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-6">
             <div className="max-w-2xl">
               <span className="text-brand-primary font-bold tracking-widest text-sm uppercase mb-4 block font-display">
                   Nuestras Soluciones
