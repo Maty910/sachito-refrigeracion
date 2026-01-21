@@ -63,7 +63,8 @@ export const Navbar = () => {
       <div className="container mx-auto px-6 py-2 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="group mr-12">
-          <SCLogo />
+          {/* <SCLogo /> */}
+          <img src="./public/SC Refrigeracion logo.svg" alt="" className='w-65' />
         </Link>
 
         {/* Desktop Links */}
@@ -80,7 +81,7 @@ export const Navbar = () => {
           
           <button 
             onClick={() => window.open('https://wa.me/+5491123376861?text=Hola!%20Quisiera%20solicitar%20un%20turno')}
-            className="bg-brand-accent text-brand-dark px-6 py-2.5 rounded-full font-bold text-sm hover:bg-brand-highlight hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all flex items-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
+            className="bg-brand-accent text-brand-dark px-6 py-2.5 rounded-full font-bold text-sm hover:bg-brand-highlight hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all flex items-center gap-2 cursor-pointer truncate transform hover:-translate-y-0.5"
           >
             Agendar visita por WhatsApp <ArrowUpRight size={16} />
           </button>
