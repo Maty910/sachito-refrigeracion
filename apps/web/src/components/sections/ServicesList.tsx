@@ -24,17 +24,18 @@ export const ServicesList = () => {
           <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-6">
             <div className="max-w-2xl">
               <span className="text-brand-primary font-bold tracking-widest text-sm uppercase mb-4 block font-display">
-                  Nuestras Soluciones
+                Servicios
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-text-on-ice font-display tracking-tight">
-                  Expertis Técnico <br/>
+              <h2 className="text-4xl md:text-5xl font-bold text-text-on-ice font-display tracking-tight sm:">
+                  Nuestras
+                  <br className="block md:hidden" />
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary to-brand-accent">
-                    Certificado.
+                    Soluciones.
                   </span>
               </h2>
             </div>
             <p className="text-text-muted-ice max-w-md text-right md:text-left font-medium text-lg">
-              No somos "todólogos". Nos especializamos 100% en sistemas de refrigeración.
+              Hacemos más que reparar aires acondicionados; brindamos tranquilidad y confort a tu hogar o negocio con cada servicio.
             </p>
           </div>
         )}
