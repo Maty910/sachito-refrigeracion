@@ -4,7 +4,7 @@ import castelarMap from '../assets/images/castelar-map.png';
 
 export const ContactPage = () => {
   return (
-    <div className="pt-32 pb-20 bg-brand-dark min-h-screen">
+    <div className="pt-10 pb-20 bg-brand-dark min-h-screen">
       <div className="container mx-auto px-6">
         {/* Encabezado */}
         <div className="text-center mb-16">
