@@ -2,7 +2,7 @@ import { Phone, Zap, Wrench, MapPin, ArrowRight } from 'lucide-react';
 
 export const WhyUsGrid = () => {
   return (
-    <section id="eleginos" className="py-24 bg-surface-ice relative overflow-hidden">
+    <section id="eleginos" className="py-12 bg-surface-ice relative overflow-hidden">
       {/* Decoración de fondo sutil (Eco del Hero) */}
       <div className="absolute top-0 right-0 w-125 h-125 bg-brand-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-125 h-125 bg-brand-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
