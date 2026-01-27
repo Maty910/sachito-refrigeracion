@@ -5,7 +5,7 @@ export const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center bg-brand-dark overflow-hidden pt-10 pb-10">
+    <section className="relative min-h-screen flex flex-col justify-center bg-brand-dark overflow-hidden pt-20 pb-10">
       
       {/* 1. IMAGEN DE FONDO (Contexto y Profundidad) */}
       <div className="absolute inset-0 z-0">
