@@ -2,7 +2,7 @@ import { ShieldCheck } from 'lucide-react';
 
 export const ServicesHero = () => {
   return (
-    <section className="relative pt-10 pb-20 bg-brand-dark overflow-hidden">
+    <section className="relative pt-20 pb-20 bg-brand-dark overflow-hidden">
       
       {/* 1. IMAGEN DE FONDO (Técnica/Abstracta) */}
       <div className="absolute inset-0 z-0">
