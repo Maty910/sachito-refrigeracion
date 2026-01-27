@@ -54,11 +54,11 @@ export const AboutSection = () => {
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
               
-              {/* Badge flotante */}
+              {/* Badge flotante 
               <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/20">
                 <p className="text-brand-dark font-bold font-display text-2xl">3+</p>
                 <p className="text-text-muted-ice text-xs uppercase tracking-wider font-bold">Años en el rubro</p>
-              </div>
+              </div>*/}
             </div>
           </div>
 
