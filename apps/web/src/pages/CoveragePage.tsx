@@ -111,7 +111,7 @@ export const CoveragePage = () => {
                     href="https://www.google.com/maps/search/?api=1&query=Castelar+Zona+Oeste" 
                     target="_blank" 
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 bg-brand-accent text-brand-dark px-6 py-3 rounded-full font-bold hover:bg-brand-highlight hover:shadow-lg hover:shadow-cyan-500/20 transition-all transform hover:-translate-y-1"
+                    className="inline-flex items-center gap-2 bg-brand-accent text-text-main px-6 py-3 rounded-full font-bold hover:bg-brand-highlight hover:shadow-glow transition-all transform hover:-translate-y-1"
                   >
                     <Navigation size={18} /> Ver en Google Maps
                   </a>
