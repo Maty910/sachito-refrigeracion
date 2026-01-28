@@ -36,7 +36,7 @@ export const HomeServices = () => {
               ¿Qué hacemos?
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white font-display">
-              Soluciones <span className="text-brand-primary">Integrales</span>
+              Soluciones{' '}<span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary to-brand-accent">Integrales</span>
             </h2>
           </div>
           <button 
