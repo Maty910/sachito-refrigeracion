@@ -28,7 +28,7 @@ export const Hero = () => {
           <div className="lg:col-span-7">
             
             {/* Badge de Estado */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-highlight/30 bg-brand-highlight/10 text-brand-highlight text-xs font-bold tracking-widest uppercase mb-8 backdrop-blur-md shadow-lg shadow-brand-highlight/5">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-highlight/30 bg-brand-highlight/10 text-brand-highlight text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md shadow-lg shadow-brand-highlight/5">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-highlight opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-highlight"></span>
@@ -37,8 +37,7 @@ export const Hero = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-text-main leading-[0.95] tracking-tight mb-8 font-display drop-shadow-2xl">
-              EL FRÍO <br/>
-              QUE <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-accent to-white">NECESITÁS</span>.
+              EL FRÍO QUE <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-accent to-white">NECESITÁS</span>.
             </h1>
             
             <p className="text-xl text-gray-300 max-w-xl leading-relaxed mb-10 font-light border-l-4 border-brand-accent pl-6">
