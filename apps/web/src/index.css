@@ -9,41 +9,42 @@
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
 
-  /* 2. PALETA DE COLORES - VERSIÓN "ROYAL TRUST" 🔵 */
+  /* 2. PALETA DE COLORES - VERSIÓN "DEEP INDUSTRIAL" 🏭 */
+  /* Ajustada para máximo contraste y cero "celeste" */
 
   /* BRAND */
-  --color-brand-dark: #0B1035;       /* Mantenemos tu base oscura (Navy Profundo) */
-  --color-brand-primary: #172554;    /* Azul muy oscuro para contrastes sutiles (Blue 950) */
+  --color-brand-dark: #0B1035;       /* Base Navy Profundo (Tu color original) */
+  --color-brand-primary: #172554;    /* Azul Noche (Blue 950) - Para fondos secundarios oscuros */
   
-  /* EL CAMBIO IMPORTANTE: */
-  --color-brand-accent: #2563eb;     /* Azul Real (Blue 600) - Mucho más serio y confiable que el celeste */
-  --color-brand-highlight: #3b82f6;  /* Azul Vibrante (Blue 500) - Para hovers y brillos */
+  /* EL CAMBIO DE CONTRASTE: */
+  --color-brand-accent: #1d4ed8;     /* Azul Intenso (Blue 700) - Más oscuro que antes, garantiza lectura perfecta sobre blanco */
+  --color-brand-highlight: #2563eb;  /* Azul Real (Blue 600) - Para hovers, sigue siendo azul puro, no celeste */
 
   /* SURFACE (OSCUROS) */
-  --color-surface-dark: #020617;     /* Casi negro azulado, da mucha elegancia */
-  --color-surface-card: #1e293b;     /* Gris azulado oscuro (Slate 800) para tarjetas */
+  --color-surface-dark: #020617;     /* Negro Azulado (Slate 950) - Elegancia máxima */
+  --color-surface-card: #1e293b;     /* Gris Acero (Slate 800) - Mejor contraste con el texto blanco */
   
   /* SURFACE (CLAROS) */
-  --color-surface-ice: #f1f5f9;      /* Gris Hielo muy suave (Slate 100) - Menos chillón que el blanco puro */
+  --color-surface-ice: #f1f5f9;      /* Gris Nube (Slate 100) - Descansa la vista, evita el brillo excesivo del blanco */
   --color-surface-white: #ffffff;    /* Blanco Puro */
 
   /* TEXT (OSCURO) */
   --color-text-main: #ffffff;        
-  --color-text-muted: #94a3b8;       /* Slate 400 */
+  --color-text-muted: #cbd5e1;       /* Slate 300 - Aclarado un poco para que se lea mejor sobre fondos oscuros */
 
   /* TEXT (PARA FONDO CLARO) */
-  --color-text-on-ice: #0f172a;      /* Azul muy oscuro (Slate 900) */
-  --color-text-muted-ice: #475569;   /* Gris medio (Slate 600) */
+  --color-text-on-ice: #0f172a;      /* Azul Petróleo (Slate 900) - Máximo contraste sobre fondos claros */
+  --color-text-muted-ice: #334155;   /* Gris Plomo (Slate 700) - Oscurecido para que no se pierda la lectura */
   
   /* STATUS */
-  --color-status-success: #16a34a;   /* Verde más sobrio (Green 600) */
-  --color-status-error: #dc2626;     /* Rojo estándar */
-  --color-status-warning: #ea580c;   /* Naranja quemado */
+  --color-status-success: #15803d;   /* Verde Ingeniero (Green 700) - Más serio */
+  --color-status-error: #b91c1c;     /* Rojo Alerta (Red 700) */
+  --color-status-warning: #c2410c;   /* Naranja Seguridad (Orange 700) */
 
   /* 3. ANIMACIONES Y EFECTOS */
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
-  /* Sombra ajustada al nuevo azul */
-  --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.4); 
+  /* Sombra ajustada al nuevo azul más profundo */
+  --shadow-glow: 0 0 20px rgba(29, 78, 216, 0.3); 
 }
 
 /* --- ESTILOS BASE --- */
@@ -81,5 +82,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brand-accent); /* Ahora el scroll se ilumina con el azul real */
+  background: var(--color-brand-accent);
 }
