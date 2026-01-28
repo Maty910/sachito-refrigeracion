@@ -27,7 +27,7 @@ export const ServicesList = () => {
                 Servicios
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-text-on-ice font-display tracking-tight sm:">
-                  Nuestras
+                  Nuestras{' '}
                   <br className="block md:hidden" />
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary to-brand-accent">
                     Soluciones.
