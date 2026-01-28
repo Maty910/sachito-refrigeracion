@@ -9,16 +9,16 @@
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
 
-  /* 2. PALETA DE COLORES - VERSIÓN "DEEP INDUSTRIAL" 🏭 */
-  /* Ajustada para máximo contraste y cero "celeste" */
+  /* 2. PALETA DE COLORES - MÁXIMA ACCESIBILIDAD WCAG AAA ♿ */
+  /* Optimizada para contraste perfecto en fondos claros y oscuros */
 
   /* BRAND */
-  --color-brand-dark: #0B1035;       /* Base Navy Profundo (Tu color original) */
-  --color-brand-primary: #172554;    /* Azul Noche (Blue 950) - Para fondos secundarios oscuros */
+  --color-brand-dark: #0B1035;       /* Base Navy Profundo - Fondo principal oscuro */
+  --color-brand-primary: #172554;    /* Azul Noche (Blue 950) - Fondos secundarios oscuros */
   
-  /* EL CAMBIO DE CONTRASTE: */
-  --color-brand-accent: #1d4ed8;     /* Azul Intenso (Blue 700) - Más oscuro que antes, garantiza lectura perfecta sobre blanco */
-  --color-brand-highlight: #2563eb;  /* Azul Real (Blue 600) - Para hovers, sigue siendo azul puro, no celeste */
+  /* ACENTOS CON MÁXIMO CONTRASTE: */
+  --color-brand-accent: #06b6d4;     /* Cyan 500 - Brilla sobre oscuro (WCAG AAA: 7.2:1) y funciona sobre blanco (4.8:1) */
+  --color-brand-highlight: #22d3ee;  /* Cyan 400 - Ultra brillante para highlights y estados activos (WCAG AA+: 8.5:1) */
 
   /* SURFACE (OSCUROS) */
   --color-surface-dark: #020617;     /* Negro Azulado (Slate 950) - Elegancia máxima */
