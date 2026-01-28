@@ -78,7 +78,7 @@ export const Footer = () => {
             
             {/* Columna 1: Marca y Ubicación */}
             <div className="space-y-6">
-              <SCLogo />
+              <SCLogo variant="footer" />
               <div className="flex items-start gap-3 text-text-muted">
                   <MapPin className="shrink-0 mt-1 text-brand-accent" size={20} />
                   <p className="leading-relaxed">Base Operativa en Castelar.<br/>Cobertura en todo Zona Oeste y CABA (Consultar zonas específicas).</p>
