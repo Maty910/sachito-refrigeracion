@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-// import { SCLogo } from '../ui/SCLogo';
-import SCLogo from '../../assets/images/SC Refrigeracion logo.svg'; 
+import { SCLogo } from '../ui/SCLogo'; 
 
 
 export const Navbar = () => {
@@ -62,11 +61,10 @@ export const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-white/10 transition-all">
-      <div className="container mx-auto px-6 py-2 flex justify-between items-center">
+      <div className="container mx-0 px-2 py-2 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="group mr-12">
-          {/* <SCLogo /> */}
-          <img src={SCLogo} alt="SC Refrigeracion Logo" className='w-65' />
+        <Link to="/" className="group mr-25 transition-opacity hover:opacity-80">
+          <SCLogo variant="navbar" />
         </Link>
 
         {/* Desktop Links */}
