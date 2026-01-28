@@ -9,38 +9,41 @@
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
 
-  /* 2. PALETA DE COLORES */
+  /* 2. PALETA DE COLORES - VERSIÓN "ROYAL TRUST" 🔵 */
 
   /* BRAND */
-  --color-brand-dark: #0B1035;       
-  --color-brand-primary: #1e3a8a;    
-  --color-brand-accent: #06b6d4;     
-  --color-brand-highlight: #22d3ee;  
+  --color-brand-dark: #0B1035;       /* Mantenemos tu base oscura (Navy Profundo) */
+  --color-brand-primary: #172554;    /* Azul muy oscuro para contrastes sutiles (Blue 950) */
+  
+  /* EL CAMBIO IMPORTANTE: */
+  --color-brand-accent: #2563eb;     /* Azul Real (Blue 600) - Mucho más serio y confiable que el celeste */
+  --color-brand-highlight: #3b82f6;  /* Azul Vibrante (Blue 500) - Para hovers y brillos */
 
   /* SURFACE (OSCUROS) */
-  --color-surface-dark: #080c29;     
-  --color-surface-card: #131b4d;     
+  --color-surface-dark: #020617;     /* Casi negro azulado, da mucha elegancia */
+  --color-surface-card: #1e293b;     /* Gris azulado oscuro (Slate 800) para tarjetas */
   
-  /* SURFACE (CLAROS - NUEVOS) ❄️ */
-  --color-surface-ice: #f8fafc;      /* Blanco Hielo (Slate-50) */
+  /* SURFACE (CLAROS) */
+  --color-surface-ice: #f1f5f9;      /* Gris Hielo muy suave (Slate 100) - Menos chillón que el blanco puro */
   --color-surface-white: #ffffff;    /* Blanco Puro */
 
   /* TEXT (OSCURO) */
   --color-text-main: #ffffff;        
-  --color-text-muted: #94a3b8;       
+  --color-text-muted: #94a3b8;       /* Slate 400 */
 
-  /* TEXT (PARA FONDO CLARO - NUEVOS) ❄️ */
-  --color-text-on-ice: #0f172a;      /* Azul muy oscuro (Slate-900) */
-  --color-text-muted-ice: #475569;   /* Gris medio (Slate-600) */
+  /* TEXT (PARA FONDO CLARO) */
+  --color-text-on-ice: #0f172a;      /* Azul muy oscuro (Slate 900) */
+  --color-text-muted-ice: #475569;   /* Gris medio (Slate 600) */
   
   /* STATUS */
-  --color-status-success: #10b981;   
-  --color-status-error: #ef4444;     
-  --color-status-warning: #f59e0b;   
+  --color-status-success: #16a34a;   /* Verde más sobrio (Green 600) */
+  --color-status-error: #dc2626;     /* Rojo estándar */
+  --color-status-warning: #ea580c;   /* Naranja quemado */
 
   /* 3. ANIMACIONES Y EFECTOS */
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
-  --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.5); 
+  /* Sombra ajustada al nuevo azul */
+  --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.4); 
 }
 
 /* --- ESTILOS BASE --- */
@@ -78,5 +81,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brand-primary);
+  background: var(--color-brand-accent); /* Ahora el scroll se ilumina con el azul real */
 }
