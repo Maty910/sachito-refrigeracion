@@ -58,7 +58,7 @@ export const FAQSection = () => {
               Queremos que contrates con total tranquilidad. Acá te dejamos las respuestas a lo que más nos preguntan nuestros clientes.
             </p>
             <button 
-              onClick={() => window.open('https://wa.me/+5491123376861')}
+              onClick={() => window.open('https://wa.me/+5491176685418')}
               className="hidden lg:inline-flex text-brand-accent font-bold items-center gap-2 hover:text-brand-highlight transition-colors"
             >
               ¿Tenés otra duda? Escribinos al WhatsApp

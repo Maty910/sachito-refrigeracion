@@ -7,7 +7,7 @@ const WhatsAppIcon = () => (
 export const FloatingWhatsApp = () => {
   return (
     <a
-      href="https://wa.me/+5491123376861?text=Hola!%20Estoy%20visitando%20tu%20web%20y%20tengo%20una%20consulta."
+      href="https://wa.me/+5491176685418?text=Hola!%20Estoy%20visitando%20tu%20web%20y%20tengo%20una%20consulta."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 group flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all duration-300"

@@ -35,7 +35,7 @@ export const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-sm text-text-muted font-bold uppercase">Urgencias / WhatsApp</p>
-                    <p className="text-xl text-white font-display">11 2337 6861</p>
+                    <p className="text-xl text-white font-display">1176685418</p>
                     <p className="text-xs text-brand-accent mt-1">Respuesta inmediata</p>
                   </div>
                 </div>
@@ -96,7 +96,7 @@ export const ContactPage = () => {
                 e.preventDefault();
                 const formData = new FormData(e.currentTarget);
                 const text = `Hola! Soy ${formData.get('name')}. Mi consulta es: ${formData.get('message')} y estoy ubicado en ${formData.get('location')}.`;
-                window.open(`https://wa.me/+5491123376861?text=${encodeURIComponent(text)}`);
+                window.open(`https://wa.me/+5491176685418?text=${encodeURIComponent(text)}`);
               }}
             >
               

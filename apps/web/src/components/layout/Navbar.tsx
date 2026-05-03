@@ -80,7 +80,7 @@ export const Navbar = () => {
           </div>
           
           <button 
-            onClick={() => window.open('https://wa.me/+5491123376861?text=Hola!%20Quisiera%20solicitar%20un%20turno')}
+            onClick={() => window.open('https://wa.me/+5491176685418?text=Hola!%20Quisiera%20solicitar%20un%20turno')}
             className="bg-brand-accent text-text-main px-6 py-2.5 rounded-full font-bold text-sm hover:bg-brand-highlight hover:shadow-glow transition-all flex items-center gap-2 cursor-pointer truncate transform hover:-translate-y-0.5"
           >
             Agendar visita por WhatsApp <ArrowUpRight size={16} />

@@ -22,7 +22,7 @@ const WhatsAppIcon = () => (
 );
 
 export const Footer = () => {
-  const phoneNumber = "+5491123376861";
+  const phoneNumber = "+5491176685418";
   const message = "Hola SC! Vi tu web y quería pedirte un presupuesto.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
