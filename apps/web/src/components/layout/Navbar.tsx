@@ -99,7 +99,7 @@ export const Navbar = () => {
           <Link to="/" onClick={() => setIsOpen(false)} className="text-xl text-text-main font-medium border-b border-white/5 pb-2">Inicio</Link>
           
           <Link to="/servicios" onClick={() => setIsOpen(false)} className={`text-xl transition-colors ${activeSection === '/servicios' ? 'text-brand-accent font-bold' : 'text-text-muted'}`}>Servicios</Link>
-          <Link to="/cobertura" onClick={() => setIsOpen(false)} className={`text-xl transition-colors ${activeSection === '/cobertura' ? 'text-brand-accent font-bold' : 'text-text-muted'}`}>Zona de Cobertura</Link>
+          <Link to="/zonas-de-cobertura" onClick={() => setIsOpen(false)} className={`text-xl transition-colors ${activeSection === '/zonas-de-cobertura' ? 'text-brand-accent font-bold' : 'text-text-muted'}`}>Zona de Cobertura</Link>
           
           <Link to="/#garantia" onClick={() => setIsOpen(false)} className={`text-xl transition-colors ${activeSection.includes('#garantia') ? 'text-brand-accent font-bold' : 'text-text-muted'}`}>Garantía</Link>
           
