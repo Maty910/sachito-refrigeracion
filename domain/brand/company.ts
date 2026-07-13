@@ -21,5 +21,9 @@ export const COMPANY = {
   brand: {
     tagline: 'Tu aire en las mejores manos.',
     serviceRole: 'Servicio Técnico Oficial',
+    logo: {
+      webp: '/SC-Icon.webp',
+      ico: '/SC-Icon.ico',
+    },
   },
 } as const;

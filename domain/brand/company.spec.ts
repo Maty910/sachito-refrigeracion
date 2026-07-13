@@ -45,4 +45,31 @@ describe('COMPANY identity contract', () => {
       expect(value).toMatch(/\S/);
     });
   });
+
+  describe('COMPANY.brand.logo', () => {
+    it.each([
+      ['webp', COMPANY.brand.logo.webp],
+      ['ico', COMPANY.brand.logo.ico],
+    ])('expone %s como path público que comienza con "/"', (_label, path) => {
+      expect(path).toMatch(/^\//);
+    });
+
+    it.each([
+      ['webp', COMPANY.brand.logo.webp],
+      ['ico', COMPANY.brand.logo.ico],
+    ])('expone %s como path no vacío ni en blanco', (_label, path) => {
+      expect(path).toMatch(/\S/);
+    });
+
+    it.each<[string, string, RegExp]>([
+      ['webp', COMPANY.brand.logo.webp, /\.webp$/i],
+      ['ico', COMPANY.brand.logo.ico, /\.ico$/i],
+    ])('expone %s apuntando a un asset con la extensión correspondiente', (_label, path, pattern) => {
+      expect(path).toMatch(pattern);
+    });
+
+    it('webp e ico apuntan a assets distintos (no son el mismo archivo)', () => {
+      expect(COMPANY.brand.logo.webp).not.toBe(COMPANY.brand.logo.ico);
+    });
+  });
 });
