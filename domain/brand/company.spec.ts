@@ -47,29 +47,49 @@ describe('COMPANY identity contract', () => {
   });
 
   describe('COMPANY.brand.logo', () => {
-    it.each([
-      ['webp', COMPANY.brand.logo.webp],
-      ['ico', COMPANY.brand.logo.ico],
-    ])('expone %s como path público que comienza con "/"', (_label, path) => {
-      expect(path).toMatch(/^\//);
+    describe('header', () => {
+      it('expone un path público que comienza con "/"', () => {
+        expect(COMPANY.brand.logo.header).toMatch(/^\//);
+      });
+
+      it('expone un path no vacío ni en blanco', () => {
+        expect(COMPANY.brand.logo.header).toMatch(/\S/);
+      });
+
+      it('apunta a un asset con extensión .png', () => {
+        expect(COMPANY.brand.logo.header).toMatch(/\.png$/i);
+      });
     });
 
-    it.each([
-      ['webp', COMPANY.brand.logo.webp],
-      ['ico', COMPANY.brand.logo.ico],
-    ])('expone %s como path no vacío ni en blanco', (_label, path) => {
-      expect(path).toMatch(/\S/);
+    describe('favicon', () => {
+      it.each([
+        ['webp', COMPANY.brand.logo.favicon.webp],
+        ['ico', COMPANY.brand.logo.favicon.ico],
+      ])('expone %s como path público que comienza con "/"', (_label, path) => {
+        expect(path).toMatch(/^\//);
+      });
+
+      it.each([
+        ['webp', COMPANY.brand.logo.favicon.webp],
+        ['ico', COMPANY.brand.logo.favicon.ico],
+      ])('expone %s como path no vacío ni en blanco', (_label, path) => {
+        expect(path).toMatch(/\S/);
+      });
+
+      it.each<[string, string, RegExp]>([
+        ['webp', COMPANY.brand.logo.favicon.webp, /\.webp$/i],
+        ['ico', COMPANY.brand.logo.favicon.ico, /\.ico$/i],
+      ])('expone %s apuntando a un asset con la extensión correspondiente', (_label, path, pattern) => {
+        expect(path).toMatch(pattern);
+      });
+
+      it('webp e ico apuntan a assets distintos (no son el mismo archivo)', () => {
+        expect(COMPANY.brand.logo.favicon.webp).not.toBe(COMPANY.brand.logo.favicon.ico);
+      });
     });
 
-    it.each<[string, string, RegExp]>([
-      ['webp', COMPANY.brand.logo.webp, /\.webp$/i],
-      ['ico', COMPANY.brand.logo.ico, /\.ico$/i],
-    ])('expone %s apuntando a un asset con la extensión correspondiente', (_label, path, pattern) => {
-      expect(path).toMatch(pattern);
-    });
-
-    it('webp e ico apuntan a assets distintos (no son el mismo archivo)', () => {
-      expect(COMPANY.brand.logo.webp).not.toBe(COMPANY.brand.logo.ico);
+    it('header y favicon.webp apuntan a assets distintos (separación semántica UI vs favicon)', () => {
+      expect(COMPANY.brand.logo.header).not.toBe(COMPANY.brand.logo.favicon.webp);
     });
   });
 });
