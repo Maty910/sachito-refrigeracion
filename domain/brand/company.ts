@@ -22,7 +22,7 @@ export const COMPANY = {
     tagline: 'Tu aire en las mejores manos.',
     serviceRole: 'Servicio Técnico Oficial',
     logo: {
-      header: '/brand-logo.png',
+      header: '/SC-Icon.webp',
       favicon: {
         webp: '/SC-Icon.webp',
         ico: '/SC-Icon.ico',
