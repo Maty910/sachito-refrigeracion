@@ -95,7 +95,7 @@ export const Footer = () => {
               <ul className="space-y-4 text-text-muted">
                   <li><Link to="/" className="hover:text-brand-accent transition-colors">Inicio</Link></li>
                   <li><Link to="/servicios" className="hover:text-brand-accent transition-colors">Servicios</Link></li>
-                  <li><Link to="/cobertura" className="hover:text-brand-accent transition-colors">Zona de Cobertura</Link></li>
+                  <li><Link to="/zonas-de-cobertura" className="hover:text-brand-accent transition-colors">Zona de Cobertura</Link></li>
                   <li><Link to="/contacto" className="hover:text-brand-accent transition-colors">Contacto</Link></li>
               </ul>
             </div>
