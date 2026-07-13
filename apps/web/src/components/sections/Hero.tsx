@@ -33,7 +33,7 @@ export const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-highlight opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-highlight"></span>
               </span>
-              Servicio Técnico Activo • Zona Oeste
+              Servicio Técnico Especializado • Castelar, Buenos Aires
             </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-text-main leading-[0.95] tracking-tight mb-8 font-display drop-shadow-2xl">
