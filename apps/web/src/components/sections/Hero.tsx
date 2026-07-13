@@ -1,5 +1,6 @@
 import { ArrowUpRight, ShieldCheck, MapPin, Star, ThermometerSnowflake } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { SCLogo } from '../ui/SCLogo';
 
 export const Hero = () => {
   const navigate = useNavigate();
@@ -41,8 +42,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-xl text-gray-300 max-w-xl leading-relaxed mb-10 font-light border-l-4 border-brand-accent pl-6">
-              Olvidate del calor y de los técnicos que te dejan plantado. 
-              En SC Refrigeración combinamos <strong className="text-white font-bold">prolijidad</strong>, <strong className="text-white font-bold">puntualidad</strong> y <strong className="text-white font-bold">garantía escrita</strong>.
+              Mantené tu carga a la <strong className="text-white font-bold">temperatura</strong> que necesita durante todos tus viajes y traslados. <br /> En <strong className="text-white font-bold">SC Refrigeración</strong>, nos aseguramos que tus productos lleguen en óptimas condiciones.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -88,39 +88,27 @@ export const Hero = () => {
             <div className="relative bg-surface-card/60 backdrop-blur-xl border border-white/10 p-8 rounded-4xl shadow-2xl overflow-hidden">
               
               {/* Header de la Card */}
-              <div className="flex justify-between items-start mb-8 border-b border-white/5 pb-6">
-                <div>
-                  <p className="text-xs text-brand-highlight font-bold uppercase tracking-widest mb-1">Status del Sistema</p>
-                  <h3 className="text-2xl font-bold text-white font-display">Operativo</h3>
-                </div>
-                <div className="bg-brand-primary/20 p-3 rounded-xl text-brand-accent animate-pulse">
-                  <ThermometerSnowflake size={32} />
-                </div>
-              </div>
-
-              {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="bg-brand-dark/50 p-4 rounded-xl border border-white/5">
-                  <p className="text-3xl font-bold text-white mb-1 font-display">+500</p>
-                  <p className="text-xs text-gray-400 uppercase">Instalaciones</p>
-                </div>
-                <div className="bg-brand-dark/50 p-4 rounded-xl border border-white/5">
-                  <p className="text-3xl font-bold text-white mb-1 font-display">24h</p>
-                  <p className="text-xs text-gray-400 uppercase">Respuesta</p>
-                </div>
-              </div>
-
-              {/* Botón Flotante Simulado (Review) */}
-              <div className="bg-brand-accent/10 border border-brand-accent/20 p-4 rounded-xl flex items-center gap-4">
+              <div className="bg-brand-accent/10 border border-brand-accent/20 p-4 rounded-xl flex items-center gap-4 mb-6">
                 <div className="bg-brand-accent text-brand-dark p-2 rounded-full">
                   <ShieldCheck size={20} />
                 </div>
                 <div>
                   <p className="text-sm font-bold text-white">Garantía Asegurada</p>
-                  <p className="text-xs text-brand-highlight">90 días de cobertura escrita</p>
+                  <p className="text-xs text-brand-highlight">1 año / 850 horas de uso</p>
                 </div>
               </div>
 
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-brand-dark/50 p-4 rounded-xl border border-white/5">
+                  <p className="text-3xl font-bold text-white font-display">+500</p>
+                  <p className="text-xs text-gray-400 uppercase">Instalaciones</p>
+                </div>
+                <div className="bg-brand-dark/50 p-4 rounded-xl border border-white/5">
+                  <p className="text-3xl font-bold text-white font-display">24h</p>
+                  <p className="text-xs text-gray-400 uppercase">Respuesta</p>
+                </div>
+              </div>
             </div>
             
             {/* Elemento Decorativo Flotante */}
