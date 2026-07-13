@@ -16,7 +16,7 @@ export function SCLogo({ variant = 'navbar', className = '' }: SCLogoProps) {
 
   return (
     <img
-      src={COMPANY.brand.logo.webp}
+      src={COMPANY.brand.logo.header}
       alt={COMPANY.name.commercial}
       className={baseClasses}
     />
