@@ -101,10 +101,11 @@ export const ContactPage = () => {
             >
               
               <div>
-                <label className="block text-xs font-bold text-brand-accent uppercase mb-2 ml-1">Nombre Completo</label>
-                <input 
+                <label htmlFor="contact-name" className="block text-xs font-bold text-brand-accent uppercase mb-2 ml-1">Nombre Completo</label>
+                <input
+                  id="contact-name"
                   name="name"
-                  type="text" 
+                  type="text"
                   placeholder="Ej: Juan Pérez"
                   className="w-full bg-surface-card border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-all placeholder:text-gray-600"
                   required
@@ -112,10 +113,11 @@ export const ContactPage = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-brand-accent uppercase mb-2 ml-1">Ubicación</label>
-                <input 
+                <label htmlFor="contact-location" className="block text-xs font-bold text-brand-accent uppercase mb-2 ml-1">Ubicación</label>
+                <input
+                  id="contact-location"
                   name="location"
-                  type="text" 
+                  type="text"
                   placeholder="Ej: Castelar Norte"
                   className="w-full bg-surface-card border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-all placeholder:text-gray-600"
                   required
@@ -123,8 +125,9 @@ export const ContactPage = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-brand-accent uppercase mb-2 ml-1">Consulta</label>
-                <textarea 
+                <label htmlFor="contact-message" className="block text-xs font-bold text-brand-accent uppercase mb-2 ml-1">Consulta</label>
+                <textarea
+                  id="contact-message"
                   name="message"
                   rows={4}
                   placeholder="Necesito instalar un aire..."
