@@ -1,73 +1,92 @@
-import { ArrowRight, Snowflake, Wrench, Settings } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { ArrowRight, Settings, Snowflake, Wrench } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const services = [
+  {
+    id: '01',
+    title: 'Instalación',
+    description: 'Equipos de frío para transporte, camiones y utilitarios.',
+    Icon: Snowflake,
+  },
+  {
+    id: '02',
+    title: 'Reparación',
+    description: 'Diagnóstico y arreglo de sistemas de refrigeración y aire acondicionado.',
+    Icon: Wrench,
+  },
+  {
+    id: '03',
+    title: 'Mantenimiento',
+    description: 'Planes de mantenimiento preventivo y correctivo para asegurar el rendimiento óptimo de tus equipos.',
+    Icon: Settings,
+  },
+] as const;
 
 export const HomeServices = () => {
-  const navigate = useNavigate();
-
-  const categories = [
-    {
-      title: "Instalación",
-      desc: "Split y Multisplit. Respetamos la garantía de fábrica.",
-      icon: <Snowflake size={32} />,
-      color: "bg-blue-50 text-blue-600"
-    },
-    {
-      title: "Reparación",
-      desc: "Placas electrónicas, cambio de compresores y fugas.",
-      icon: <Wrench size={32} />,
-      color: "bg-orange-50 text-orange-600"
-    },
-    {
-      title: "Mantenimiento",
-      desc: "Limpieza profunda y carga de gas para ahorrar energía.",
-      icon: <Settings size={32} />,
-      color: "bg-green-50 text-green-600"
-    }
-  ];
-
   return (
-    // Mantenemos fondo oscuro acá para que contraste con el Hero y el WhyUs (que ahora es claro)
-    <section className="py-24 bg-surface-dark border-y border-white/5">
+    <section className="border-y border-white/5 bg-surface-dark py-20 md:py-24">
       <div className="container mx-auto px-6">
-        
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div>
-            <span className="text-brand-accent font-bold tracking-widest text-sm uppercase mb-2 block font-display">
+        <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+          <div className="max-w-3xl">
+            <span className="mb-3 block font-display text-sm font-bold uppercase tracking-widest text-brand-highlight">
               ¿Qué hacemos?
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white font-display">
-              Soluciones{' '}<span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary to-brand-accent">Integrales</span>
+            <h2 className="text-balance font-display text-4xl font-bold text-white md:text-5xl">
+              Soluciones para equipos de frío
             </h2>
           </div>
-          <button 
-            onClick={() => navigate('/servicios')}
-            className="group flex items-center gap-2 text-white font-bold hover:text-brand-accent transition-colors"
+
+          <Link
+            to="/servicios"
+            className="group inline-flex min-h-11 w-fit items-center gap-2 rounded-md px-1 font-bold text-white transition-colors duration-200 hover:text-brand-highlight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight focus-visible:ring-offset-4 focus-visible:ring-offset-surface-dark motion-reduce:transition-none"
           >
-            Ver detalle de servicios <ArrowRight className="group-hover:translate-x-1 transition-transform"/>
-          </button>
+            Ver detalle de servicios
+            <ArrowRight
+              aria-hidden="true"
+              className="size-5 transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1 motion-reduce:transform-none motion-reduce:transition-none"
+            />
+          </Link>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {categories.map((cat, idx) => (
-            <div 
-              key={idx}
-              onClick={() => navigate('/servicios')}
-              className="bg-surface-card border border-white/5 p-8 rounded-3xl hover:bg-white/5 transition-all cursor-pointer group"
-            >
-              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${cat.color} transition-transform group-hover:scale-110`}>
-                {cat.icon}
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-3 font-display">{cat.title}</h3>
-              <p className="text-text-muted leading-relaxed mb-6">
-                {cat.desc}
-              </p>
-              <div className="flex items-center gap-2 text-sm font-bold text-brand-accent opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                Saber más <ArrowRight size={16} />
-              </div>
-            </div>
-          ))}
-        </div>
+        <div className="mt-10 overflow-hidden rounded-xl border border-white/10 bg-surface-card/55 md:mt-12">
+          <div className="grid divide-y divide-white/10 md:grid-cols-3 md:divide-x md:divide-y-0">
+            {services.map(({ id, title, description, Icon }) => (
+              <Link
+                key={title}
+                to="/servicios"
+                className="group relative flex min-h-64 flex-col p-6 transition-colors duration-300 hover:bg-white/4 focus-visible:z-10 focus-visible:bg-white/6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-highlight motion-reduce:transition-none md:min-h-80 md:p-8"
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <span className="font-display text-sm font-bold tabular-nums tracking-widest text-brand-highlight">
+                    {id}
+                  </span>
+                  <Icon
+                    aria-hidden="true"
+                    className="size-6 text-brand-highlight"
+                    strokeWidth={1.75}
+                  />
+                </div>
 
+                <div aria-hidden="true" className="mt-5 h-px w-10 bg-brand-accent/70" />
+
+                <div className="mt-8">
+                  <h3 className="font-display text-2xl font-bold text-white">{title}</h3>
+                  <p className="mt-3 max-w-md text-pretty leading-relaxed text-text-muted">
+                    {description}
+                  </p>
+                </div>
+
+                <span className="mt-auto flex items-center gap-2 pt-8 text-sm font-bold text-brand-highlight">
+                  Saber más
+                  <ArrowRight
+                    aria-hidden="true"
+                    className="size-4 transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1 motion-reduce:transform-none motion-reduce:transition-none"
+                  />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -46,7 +46,7 @@ export const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
-                onClick={() => window.open('https://wa.me/+5491123376861?text=Hola!%20Quisiera%20solicitar%20un%20turno')}
+                onClick={() => window.open('https://wa.me/+5491176685418?text=Hola!%20Quisiera%20solicitar%20un%20turno')}
                 className="group relative bg-brand-primary text-white px-8 py-4 rounded-xl font-bold text-lg overflow-hidden transition-all hover:shadow-[0_0_40px_rgba(30,58,138,0.6)] hover:-translate-y-1"
               >
                 <div className="absolute inset-0 bg-linear-to-r from-brand-primary to-brand-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

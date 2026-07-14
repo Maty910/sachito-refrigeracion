@@ -1,0 +1,24 @@
+{
+  "name": "SC Refrigeración",
+  "short_name": "SC Refrigeración",
+  "description": "Servicio técnico especializado en refrigeración para transporte.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0B1035",
+  "theme_color": "#0B1035",
+  "icons": [
+    {
+      "src": "/SC-Icon.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    }
+  ]
+}

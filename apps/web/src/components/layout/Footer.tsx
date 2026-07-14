@@ -1,4 +1,4 @@
-import { ArrowUpRight, MapPin, Mail } from 'lucide-react';
+import { ArrowUpRight, MapPin, Mail, } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SCLogo } from '../ui/SCLogo';
 
@@ -11,7 +11,7 @@ const InstagramIcon = () => (
 
 const TikTokIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.49-3.35-3.98-5.6-.48-2.21-.08-4.55 1.18-6.44 1.32-1.97 3.65-3.36 6.06-3.45V8.2c-1.13.2-2.19.79-3 1.62-.9.91-1.45 2.13-1.48 3.4-.04 1.53.53 3.03 1.56 4.14.99 1.08 2.45 1.69 3.92 1.62 1.5-.02 2.92-.66 3.95-1.78 1.04-1.15 1.55-2.73 1.49-4.28-.05-4.45-.02-8.92-.02-13.38z"/>
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/>
   </svg>
 );
 
@@ -118,7 +118,7 @@ export const Footer = () => {
                   <a href="https://www.instagram.com/s.c.refrigeracion/?es" className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-brand-accent hover:text-brand-dark hover:border-brand-accent transition-all duration-300 group">
                       <InstagramIcon />
                   </a>
-                  <a href="https://www.tiktok.com/@sachito.refrigeracion" className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-brand-accent hover:text-brand-dark hover:border-brand-accent transition-all duration-300 group">
+                  <a href="https://www.tiktok.com/@s.c.refrigeracion" className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-brand-accent hover:text-brand-dark hover:border-brand-accent transition-all duration-300 group">
                       <TikTokIcon />
                   </a>
                 </div>

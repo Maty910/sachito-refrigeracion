@@ -40,7 +40,7 @@ export const WhyUsGrid = () => {
                     </p>
                 </div>
                 <button 
-                    onClick={() => window.open('https://wa.me/+5491123376861?text=Hola!%20Quisiera%20consultar%20sobre%20una%20urgencia')}
+                    onClick={() => window.open('https://wa.me/+5491176685418?text=Hola!%20Quisiera%20consultar%20sobre%20una%20urgencia')}
                     className="shrink-0 bg-brand-dark text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-primary transition-colors flex items-center gap-2 shadow-lg shadow-brand-dark/20"
                 >
                     Consultar Ahora <ArrowRight size={18} />
@@ -81,7 +81,7 @@ export const WhyUsGrid = () => {
               </div>
               
               <button 
-                onClick={() => window.open('https://wa.me/+5491123376861?text=Hola!%20Quisiera%20consultar%20sobre%20mi%20equipo')}
+                onClick={() => window.open('https://wa.me/+5491176685418?text=Hola!%20Quisiera%20consultar%20sobre%20mi%20equipo')}
                 className="bg-white text-brand-dark px-8 py-3 rounded-xl font-bold hover:bg-brand-highlight transition-all flex items-center gap-2 shadow-lg w-full md:w-auto justify-center"
               >
                 <Phone size={20} /> WhatsApp Directo

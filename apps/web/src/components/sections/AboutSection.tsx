@@ -23,21 +23,21 @@ export const AboutSection = () => {
               Nos especializamos en la instalación, mantenimiento y reparación de sistemas de refrigeración para <strong>camiones, semi-remolques, utilitarios, camionetas</strong>, asegurando que cada carga llegue a su destino en condiciones óptimas.
             </p>
             <p className="text-text-muted-ice text-lg leading-relaxed mb-8">
-              Nuestro compromiso con la calidad, la innovación y la satisfacción del cliente nos impulsa a seguir creciendo y adaptándonos a las necesidades del mercado, ofreciendo siempre un servicio técnico especializado y confiable.
+              Nuestro <strong>compromiso</strong> con la calidad, la <strong>innovación</strong> y la <strong>satisfacción del cliente</strong> nos impulsa a seguir creciendo y adaptándonos a las necesidades del mercado.
             </p>
 
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="text-brand-primary shrink-0" />
-                <span className="text-text-on-ice font-medium">Técnicos Especializados</span>
+                <span className="text-text-on-ice font-medium">Técnicos Especializados en Transporte</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="text-brand-primary shrink-0" />
-                <span className="text-text-on-ice font-medium">Capacitación constante en tecnología Inverter</span>
+                <span className="text-text-on-ice font-medium">Capacitación constante en nuevas tecnologías</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="text-brand-primary shrink-0" />
-                <span className="text-text-on-ice font-medium">Compromiso de puntualidad</span>
+                <span className="text-text-on-ice font-medium">Compromiso con cada cliente</span>
               </div>
             </div>
           </div>
@@ -54,12 +54,6 @@ export const AboutSection = () => {
                 alt="Técnico de SC trabajando" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
-              
-              {/* Badge flotante 
-              <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/20">
-                <p className="text-brand-dark font-bold font-display text-2xl">3+</p>
-                <p className="text-text-muted-ice text-xs uppercase tracking-wider font-bold">Años en el rubro</p>
-              </div>*/}
             </div>
           </div>
 
