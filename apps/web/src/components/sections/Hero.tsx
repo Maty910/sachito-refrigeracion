@@ -1,6 +1,5 @@
-import { ArrowUpRight, ShieldCheck, MapPin, Star, ThermometerSnowflake } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, MapPin, Star } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { SCLogo } from '../ui/SCLogo';
 
 export const Hero = () => {
   const navigate = useNavigate();
@@ -20,7 +19,7 @@ export const Hero = () => {
       </div>
 
       {/* Efectos de Luz Ambientales */}
-      <div className="absolute top-0 right-0 w-200px h-200px bg-brand-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none z-0"></div>
+      <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-brand-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none z-0"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
