@@ -1,4 +1,4 @@
-import type { ServiceItem } from '../../../../domain/models/service.model';
+import type { ServiceItem } from '@domain/models/service.model';
 
 export const SERVICES: ServiceItem[] = [
   {
