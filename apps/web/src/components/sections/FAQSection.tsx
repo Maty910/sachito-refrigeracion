@@ -106,7 +106,7 @@ export const FAQSection = () => {
             {/* Botón mobile */}
             <div className="lg:hidden mt-8 text-center">
               <button 
-                onClick={() => window.open('https://wa.me/+5491123376861')}
+                onClick={() => window.open('https://wa.me/+5491176685418')}
                 className="text-brand-accent font-bold inline-flex items-center gap-2 hover:text-brand-highlight transition-colors"
               >
                 ¿Tenés otra duda? Escribinos al WhatsApp
