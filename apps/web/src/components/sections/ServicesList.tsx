@@ -35,7 +35,7 @@ export const ServicesList = () => {
               </h2>
             </div>
             <p className="text-text-muted-ice max-w-md text-right md:text-left font-medium text-lg">
-              Hacemos más que reparar aires acondicionados; brindamos tranquilidad y confort a tu hogar o negocio con cada servicio.
+              En <strong>SC Refrigeración</strong>, nos especializamos en brindar soluciones integrales para la refrigeración de transporte, asegurando que cada carga llegue a su destino en condiciones óptimas.
             </p>
           </div>
         )}
@@ -96,7 +96,7 @@ export const ServicesList = () => {
                     <button 
                       onClick={(e) => {
                         e.stopPropagation(); 
-                        window.open(`https://wa.me/+5491123376861?text=Hola, me interesa el servicio de ${item.title}`);
+                        window.open(`https://wa.me/+5491176685418?text=Hola, me interesa el servicio de ${item.title}`);
                       }}
                       className="hidden md:flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-primary/10 text-brand-primary hover:bg-brand-primary hover:text-white transition-all text-sm font-bold cursor-pointer"
                     >
