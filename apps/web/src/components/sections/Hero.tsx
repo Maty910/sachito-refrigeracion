@@ -1,119 +1,117 @@
 import { ArrowUpRight, ShieldCheck, MapPin, Star } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+// Single source of truth for the Hero WhatsApp CTA. Matches the number
+// corrected in f22efa3 ("+5491176685418") so the link stays in lockstep
+// with the Navbar and other sections.
+const WHATSAPP_URL =
+  'https://wa.me/+5491176685418?text=Hola!%20Quisiera%20solicitar%20un%20turno';
 
 export const Hero = () => {
-  const navigate = useNavigate();
-
   return (
-    <section className="relative min-h-screen flex flex-col justify-center bg-brand-dark overflow-hidden pt-25 pb-10">
-      
+    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-brand-dark pb-10 pt-24">
+
       {/* 1. IMAGEN DE FONDO (Contexto y Profundidad) */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2532&auto=format&fit=crop" 
-          alt="Ambiente climatizado" 
-          className="w-full h-full object-cover object-center brightness-75"
+        <img
+          src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2532&auto=format&fit=crop"
+          alt="Ambiente climatizado"
+          className="h-full w-full object-cover object-center brightness-75"
         />
         {/* Overlay degradado para que el texto se lea perfecto */}
         <div className="absolute inset-0 bg-linear-to-r from-brand-dark via-brand-dark/95 to-brand-dark/80"></div>
       </div>
 
       {/* Efectos de Luz Ambientales */}
-      <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-brand-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none z-0"></div>
+      <div className="pointer-events-none absolute right-0 top-0 z-0 h-[200px] w-[200px] -translate-y-1/2 translate-x-1/3 rounded-full bg-brand-primary/20 blur-[120px]"></div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
-          
+      <div className="container relative z-10 mx-auto px-6">
+        <div className="grid items-center gap-12 lg:grid-cols-12">
+
           {/* COLUMNA IZQUIERDA: Propuesta de Valor */}
           <div className="lg:col-span-7">
-            
-            {/* Badge de Estado */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-highlight/30 bg-brand-highlight/10 text-brand-highlight text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md shadow-lg shadow-brand-highlight/5">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-highlight opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-highlight"></span>
+
+            {/* Badge de Estado — flat pill, no glassmorphism, no shadow */}
+            <div className="mb-6 inline-flex items-center gap-2 rounded-md border border-brand-highlight/30 bg-brand-highlight/10 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-highlight">
+              <span className="relative flex h-2 w-2" aria-hidden="true">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-status-success opacity-75 motion-reduce:animate-none"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-status-success"></span>
               </span>
               Servicio Técnico Especializado • Castelar, Buenos Aires
             </div>
-            
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-text-main leading-[0.95] tracking-tight mb-8 font-display drop-shadow-2xl">
-              EL FRÍO QUE <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-accent to-white">NECESITÁS</span>.
+
+            <h1 className="text-balance mb-8 font-display text-5xl font-bold leading-[0.95] tracking-tight text-white drop-shadow-2xl md:text-7xl lg:text-7xl">
+              EL FRÍO QUE <span className="text-brand-highlight">NECESITÁS</span>.
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-xl leading-relaxed mb-10 font-light border-l-4 border-brand-accent pl-6">
-              Mantené tu carga a la <strong className="text-white font-bold">temperatura</strong> que necesita durante todos tus viajes y traslados. <br /> En <strong className="text-white font-bold">SC Refrigeración</strong>, nos aseguramos que tus productos lleguen en óptimas condiciones.
+
+            <p className="mb-10 max-w-xl text-xl font-light leading-relaxed text-text-muted">
+              Mantené tu carga a la <strong className="font-bold text-white">temperatura</strong> que necesita durante todos tus viajes y traslados. <br /> En <strong className="font-bold text-white">SC Refrigeración</strong>, nos aseguramos que tus productos lleguen en óptimas condiciones.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={() => window.open('https://wa.me/+5491176685418?text=Hola!%20Quisiera%20solicitar%20un%20turno')}
-                className="group relative bg-brand-primary text-white px-8 py-4 rounded-xl font-bold text-lg overflow-hidden transition-all hover:shadow-[0_0_40px_rgba(30,58,138,0.6)] hover:-translate-y-1"
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Solicitar turno por WhatsApp al +5491176685418"
+                className="group inline-flex items-center justify-center gap-3 rounded-md bg-brand-primary px-8 py-4 text-lg font-bold text-white transition-colors duration-200 hover:bg-brand-accent hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark motion-reduce:transition-none"
               >
-                <div className="absolute inset-0 bg-linear-to-r from-brand-primary to-brand-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <span className="relative flex items-center justify-center gap-3">
-                  Solicitar Turno Ahora
-                  <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </span>
-              </button>
+                Solicitar Turno Ahora
+                <ArrowUpRight
+                  aria-hidden="true"
+                  className="size-5 transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1 motion-reduce:transform-none motion-reduce:transition-none"
+                />
+              </a>
 
-              <button 
-                onClick={() => navigate('/zonas-de-cobertura')}
-                className="px-8 py-4 rounded-xl font-bold text-white border border-white/10 hover:bg-white/5 transition-all flex items-center justify-center gap-2 hover:border-brand-accent/50 cursor-pointer"
+              <Link
+                to="/zonas-de-cobertura"
+                className="group inline-flex items-center justify-center gap-2 rounded-md border border-white/10 px-8 py-4 font-bold text-white transition-colors duration-200 hover:border-white/20 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark motion-reduce:transition-none"
               >
-                <MapPin size={20} className="text-brand-accent" />
+                <MapPin aria-hidden="true" size={20} className="text-brand-accent" />
                 Ver Zonas de Cobertura
-              </button>
+              </Link>
             </div>
-            
-            <div className="mt-12 flex items-center gap-6 text-sm text-gray-400 font-medium">
+
+            <div className="mt-12 flex items-center gap-6 text-sm font-medium text-text-muted">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="text-brand-accent" size={18} />
+                <ShieldCheck aria-hidden="true" className="text-brand-accent" size={18} />
                 Técnico Certificado
               </div>
-              <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
+              <div className="h-1 w-1 rounded-full bg-gray-600" aria-hidden="true"></div>
               <div className="flex items-center gap-2">
-                <Star className="text-brand-highlight" size={18} />
+                <Star aria-hidden="true" className="text-brand-highlight" size={18} />
                 4.9/5 en reseñas de clientes
               </div>
             </div>
           </div>
 
-          {/* COLUMNA DERECHA: Panel de Estado "Tech" */}
-          <div className="lg:col-span-5 relative hidden lg:block">
-            {/* Efecto Glow detrás de la card */}
-            <div className="absolute inset-0 bg-linear-to-tr from-brand-accent/20 to-transparent rounded-4xl blur-3xl transform rotate-6 scale-90"></div>
-
-            {/* CARD PRINCIPAL: Estilo Panel de Control */}
-            <div className="relative bg-surface-card/60 backdrop-blur-xl border border-white/10 p-8 rounded-4xl shadow-2xl overflow-hidden">
-              
-              {/* Header de la Card */}
-              <div className="bg-brand-accent/10 border border-brand-accent/20 p-4 rounded-xl flex items-center gap-4 mb-6">
-                <div className="bg-brand-accent text-brand-dark p-2 rounded-full">
-                  <ShieldCheck size={20} />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-white">Garantía Asegurada</p>
-                  <p className="text-xs text-brand-highlight">1 año / 850 horas de uso</p>
-                </div>
-              </div>
-
-              {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-brand-dark/50 p-4 rounded-xl border border-white/5">
-                  <p className="text-3xl font-bold text-white font-display">+500</p>
-                  <p className="text-xs text-gray-400 uppercase">Instalaciones</p>
-                </div>
-                <div className="bg-brand-dark/50 p-4 rounded-xl border border-white/5">
-                  <p className="text-3xl font-bold text-white font-display">24h</p>
-                  <p className="text-xs text-gray-400 uppercase">Respuesta</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Elemento Decorativo Flotante */}
-            <div className="absolute -bottom-6 -right-6 bg-surface-dark border border-white/10 p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce duration-3000ms">
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-              <span className="text-sm font-bold text-white">Turnos Disponibles</span>
+          {/* COLUMNA DERECHA: Tarjeta de Acción de Servicio
+              Focused service CTA, not a decorative twin of the left column. */}
+          <div className="hidden lg:col-span-5 lg:block">
+            <div className="rounded-xl border border-white/10 bg-surface-card p-8">
+              <span
+                aria-live="polite"
+                className="inline-flex items-center gap-2 rounded-md border border-status-success/30 bg-status-success/10 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-status-success"
+              >
+                <span className="relative flex h-2 w-2" aria-hidden="true">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-status-success/60 motion-reduce:animate-none" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-status-success" />
+                </span>
+                Aceptando turnos
+              </span>
+              <h2 className="mt-6 font-display text-2xl font-bold text-white">
+                Servicio técnico para transporte
+              </h2>
+              <p className="mt-3 leading-relaxed text-text-muted">
+                Diagnóstico, instalación y mantenimiento en CABA y GBA oeste.
+              </p>
+              <Link
+                to="/zonas-de-cobertura"
+                className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/10 px-6 py-3 font-bold text-white transition-colors duration-200 hover:border-white/20 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark motion-reduce:transition-none"
+              >
+                Ver zonas de cobertura
+                <MapPin aria-hidden="true" size={18} className="text-brand-accent" />
+              </Link>
             </div>
           </div>
 
