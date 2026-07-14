@@ -1,13 +1,43 @@
 import { ShieldCheck, FileCheck, Award, ThumbsUp } from 'lucide-react';
 
+// Index of guarantees — a deliberate sequence of commitments, not a grid
+// of identical feature cards. Modeled after the HomeServices index pattern
+// (numbered pill + small icon + heading + body, separated by hairline
+// dividers on a dark surface).
+const guarantees = [
+  {
+    id: '01',
+    title: '90 días de Garantía',
+    description: 'En todas nuestras instalaciones completas. Si falla la instalación, volvemos y lo reparamos sin cargo.',
+    Icon: ShieldCheck,
+  },
+  {
+    id: '02',
+    title: 'Técnicos Especializados',
+    description: 'Técnicos certificados por el Ministerio de Educación.',
+    Icon: Award,
+  },
+  {
+    id: '03',
+    title: 'Informe Técnico',
+    description: 'Entregamos comprobante de trabajo y checklist de control en cada visita. Sin sorpresas.',
+    Icon: FileCheck,
+  },
+  {
+    id: '04',
+    title: 'Materiales de 1ra',
+    description: 'Solo usamos caños de cobre y cables normalizados.',
+    Icon: ThumbsUp,
+  },
+] as const;
+
 export const GuaranteeSection = () => {
   return (
-    // CAMBIO: Fondo OSCURO (Brand Dark)
     <section id="garantia" className="py-24 bg-brand-dark relative overflow-hidden">
-      
-      {/* Decoración fondo */}
-      <div className="absolute -right-20 -top-20 text-white/5 pointer-events-none">
-        <ShieldCheck size={400} className="rotate-12"/>
+
+      {/* Decoración fondo — marca atmosférica, sin interacción */}
+      <div aria-hidden="true" className="absolute -right-20 -top-20 text-white/5 pointer-events-none">
+        <ShieldCheck size={400} className="rotate-12" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -15,59 +45,47 @@ export const GuaranteeSection = () => {
           <span className="text-brand-highlight font-bold tracking-widest text-sm uppercase mb-2 block font-display">
             Tranquilidad Total
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white font-display mb-6">
-            Garantía Escrita y <br/>
-            <span className="text-brand-accent">Respaldo Técnico.</span>
+          <h2 className="text-balance text-4xl md:text-5xl font-bold text-white font-display mb-6">
+            Garantía Escrita y <br />
+            <span className="text-brand-highlight">Respaldo Técnico.</span>
           </h2>
           <p className="text-text-muted text-lg leading-relaxed">
-            Sabemos lo que cuesta invertir en un equipo. Por eso, no solo lo instalamos: lo protegemos. 
+            Sabemos lo que cuesta invertir en un equipo. Por eso, no solo lo instalamos: lo protegemos.
             Cada trabajo cuenta con el respaldo de nuestra matrícula oficial.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Card 1 */}
-          <div className="bg-surface-card border border-white/5 p-8 rounded-3xl hover:border-brand-accent/30 transition-all duration-300 group">
-            <div className="bg-brand-primary/20 w-14 h-14 rounded-xl flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
-              <ShieldCheck size={32} />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3 font-display">90 días de Garantía</h3>
-            <p className="text-text-muted text-sm">
-              En todas nuestras instalaciones completas. Si falla la instalación, volvemos y lo reparamos sin cargo.
-            </p>
-          </div>
+        {/* Índice numerado de garantías. En mobile se apila con separadores
+            horizontales; en md+ se reordena en 4 columnas con separadores
+            verticales. Mismo lenguaje visual que el HomeServices index. */}
+        <div className="overflow-hidden rounded-xl border border-white/10 bg-surface-card/55">
+          <div className="grid divide-y divide-white/10 md:grid-cols-4 md:divide-x md:divide-y-0">
+            {guarantees.map(({ id, title, description, Icon }) => (
+              <div
+                key={id}
+                className="group relative flex min-h-64 flex-col p-6 transition-colors duration-300 hover:bg-white/4 motion-reduce:transition-none md:min-h-72 md:p-8"
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <span className="font-display text-sm font-bold tabular-nums tracking-widest text-brand-highlight">
+                    {id}
+                  </span>
+                  <Icon
+                    aria-hidden="true"
+                    className="size-6 text-brand-highlight"
+                    strokeWidth={1.75}
+                  />
+                </div>
 
-          {/* Card 2 */}
-          <div className="bg-surface-card border border-white/5 p-8 rounded-3xl hover:border-brand-accent/30 transition-all duration-300 group">
-            <div className="bg-brand-primary/20 w-14 h-14 rounded-xl flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
-              <Award size={32} />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3 font-display">Técnicos Especializados</h3>
-            <p className="text-text-muted text-sm">
-              Técnicos certificados el Ministerio de Educación.
-            </p>
-          </div>
+                <div aria-hidden="true" className="mt-5 h-px w-10 bg-brand-accent/70" />
 
-          {/* Card 3 */}
-          <div className="bg-surface-card border border-white/5 p-8 rounded-3xl hover:border-brand-accent/30 transition-all duration-300 group">
-            <div className="bg-brand-primary/20 w-14 h-14 rounded-xl flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
-              <FileCheck size={32} />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3 font-display">Informe Técnico</h3>
-            <p className="text-text-muted text-sm">
-              Entregamos comprobante de trabajo y checklist de control en cada visita. Sin sorpresas.
-            </p>
-          </div>
-
-          {/* Card 4 */}
-          <div className="bg-surface-card border border-white/5 p-8 rounded-3xl hover:border-brand-accent/30 transition-all duration-300 group">
-            <div className="bg-brand-primary/20 w-14 h-14 rounded-xl flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
-              <ThumbsUp size={32} />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3 font-display">Materiales de 1ra</h3>
-            <p className="text-text-muted text-sm">
-              Solo usamos caños de cobre y cables normalizados.
-            </p>
+                <div className="mt-8">
+                  <h3 className="font-display text-2xl font-bold text-white">{title}</h3>
+                  <p className="mt-3 max-w-md text-pretty leading-relaxed text-text-muted">
+                    {description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
