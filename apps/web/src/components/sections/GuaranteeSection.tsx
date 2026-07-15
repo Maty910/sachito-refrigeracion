@@ -7,8 +7,8 @@ import { ShieldCheck, FileCheck, Award, ThumbsUp } from 'lucide-react';
 const guarantees = [
   {
     id: '01',
-    title: '90 días de Garantía',
-    description: 'Garantía escrita de 90 días en casi todas nuestras reparaciones e instalaciones. Si falla la instalación, volvemos y lo reparamos sin cargo, siempre siguiendo las recomendaciones de uso y mantenimiento.',
+    title: '1 año o 850hs de Garantía',
+    description: 'Garantía escrita de 1 año o 850hs de uso en casi todas nuestras reparaciones e instalaciones. Si falla la instalación, volvemos y lo reparamos sin cargo, siempre siguiendo las recomendaciones de uso y mantenimiento.',
     Icon: ShieldCheck,
   },
   {

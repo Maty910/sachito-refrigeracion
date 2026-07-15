@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     question: "¿Ofrecen garantía por sus servicios?",
-    answer: "Sí, ofrecemos una garantía escrita de 90 días en casi todas nuestras reparaciones e instalaciones, siempre y cuando se sigan las recomendaciones de uso y mantenimiento. Consulta los términos específicos al momento de contratar el servicio."
+    answer: "Sí, ofrecemos una garantía escrita de 1 año o 850hs de uso en casi todas nuestras reparaciones e instalaciones, siempre y cuando se sigan las recomendaciones de uso y mantenimiento. Consulta los términos específicos al momento de contratar el servicio."
   }
 ];
 
