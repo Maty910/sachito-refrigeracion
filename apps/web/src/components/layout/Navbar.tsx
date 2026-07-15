@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { SCLogo } from '../ui/SCLogo';
+import { COMPANY } from '@domain/brand/company';
 
-// Single source of truth for the WhatsApp CTA. Matches the link used elsewhere
-// on the site so copy/phone updates land in one place later if needed.
-const WHATSAPP_URL =
-  'https://wa.me/+5491176685418?text=Hola!%20Quisiera%20solicitar%20un%20turno';
+// WhatsApp CTA del navbar: pedir un turno es la acción principal, así que
+// usamos el mensaje `schedule` y derivamos el número de COMPANY.
+const WHATSAPP_URL = `https://wa.me/${COMPANY.contact.whatsapp.number}?text=${encodeURIComponent(COMPANY.contact.whatsapp.messages.schedule)}`;
 
 interface NavLinkProps {
   to: string;

@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
+import { COMPANY } from '@domain/brand/company';
+
+// "Tenés otra duda" es una consulta, no un turno ni una urgencia.
+const FAQ_WHATSAPP_URL = `https://wa.me/${COMPANY.contact.whatsapp.number}?text=${encodeURIComponent(COMPANY.contact.whatsapp.messages.consult)}`;
 
 const FAQS = [
   {
@@ -57,8 +61,8 @@ export const FAQSection = () => {
             <p className="text-text-muted text-lg leading-relaxed mb-8">
               Queremos que contrates con total tranquilidad. Acá te dejamos las respuestas a lo que más nos preguntan nuestros clientes.
             </p>
-            <button 
-              onClick={() => window.open('https://wa.me/+5491176685418')}
+            <button
+              onClick={() => window.open(FAQ_WHATSAPP_URL)}
               className="hidden lg:inline-flex text-brand-accent font-bold items-center gap-2 hover:text-brand-highlight transition-colors"
             >
               ¿Tenés otra duda? Escribinos al WhatsApp
@@ -105,8 +109,8 @@ export const FAQSection = () => {
             
             {/* Botón mobile */}
             <div className="lg:hidden mt-8 text-center">
-              <button 
-                onClick={() => window.open('https://wa.me/+5491176685418')}
+              <button
+                onClick={() => window.open(FAQ_WHATSAPP_URL)}
                 className="text-brand-accent font-bold inline-flex items-center gap-2 hover:text-brand-highlight transition-colors"
               >
                 ¿Tenés otra duda? Escribinos al WhatsApp

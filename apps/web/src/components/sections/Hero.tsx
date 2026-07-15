@@ -1,5 +1,8 @@
 import { ArrowUpRight, ShieldCheck, MapPin, Star } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { COMPANY } from '@domain/brand/company';
+
+const HERO_WHATSAPP_URL = `https://wa.me/${COMPANY.contact.whatsapp.number}?text=${encodeURIComponent(COMPANY.contact.whatsapp.messages.schedule)}`;
 
 export const Hero = () => {
   const navigate = useNavigate();
@@ -45,8 +48,8 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={() => window.open('https://wa.me/+5491176685418?text=Hola!%20Quisiera%20solicitar%20un%20turno')}
+              <button
+                onClick={() => window.open(HERO_WHATSAPP_URL)}
                 className="group relative bg-brand-primary text-white px-8 py-4 rounded-xl font-bold text-lg overflow-hidden transition-all hover:shadow-[0_0_40px_rgba(30,58,138,0.6)] hover:-translate-y-1"
               >
                 <div className="absolute inset-0 bg-linear-to-r from-brand-primary to-brand-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

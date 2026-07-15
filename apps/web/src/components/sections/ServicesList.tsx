@@ -1,6 +1,12 @@
 import { ArrowUpRight, ChevronRight, MessageCircleQuestion } from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom'; 
+import { useNavigate, useLocation } from 'react-router-dom';
 import { SERVICES } from '../../data/services.mock';
+import { COMPANY } from '@domain/brand/company';
+
+// Helper local: arma el link de WhatsApp para un servicio puntual usando
+// la función `messages.service` y el número de COMPANY.
+const serviceWhatsappUrl = (title: string): string =>
+  `https://wa.me/${COMPANY.contact.whatsapp.number}?text=${encodeURIComponent(COMPANY.contact.whatsapp.messages.service(title))}`;
 
 export const ServicesList = () => {
   const navigate = useNavigate();
@@ -93,11 +99,12 @@ export const ServicesList = () => {
                     </div>
                   ) : (
                      // Botón Consultar
-                    <button 
+                    <button
                       onClick={(e) => {
-                        e.stopPropagation(); 
-                        window.open(`https://wa.me/+5491176685418?text=Hola, me interesa el servicio de ${item.title}`);
+                        e.stopPropagation();
+                        window.open(serviceWhatsappUrl(item.title));
                       }}
+                      aria-label={`Consultar sobre ${item.title} por WhatsApp`}
                       className="hidden md:flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-primary/10 text-brand-primary hover:bg-brand-primary hover:text-white transition-all text-sm font-bold cursor-pointer"
                     >
                       Consultar <MessageCircleQuestion size={18} />

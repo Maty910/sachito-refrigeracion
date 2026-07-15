@@ -1,4 +1,8 @@
 import { Phone, Zap, Wrench, MapPin, ArrowRight } from 'lucide-react';
+import { COMPANY } from '@domain/brand/company';
+
+const URGENCIA_WHATSAPP_URL = `https://wa.me/${COMPANY.contact.whatsapp.number}?text=${encodeURIComponent(COMPANY.contact.whatsapp.messages.urgency)}`;
+const CONSULTA_WHATSAPP_URL = `https://wa.me/${COMPANY.contact.whatsapp.number}?text=${encodeURIComponent(COMPANY.contact.whatsapp.messages.consult)}`;
 
 export const WhyUsGrid = () => {
   return (
@@ -39,8 +43,8 @@ export const WhyUsGrid = () => {
                         Prioridad absoluta para familias con niños, adultos mayores y comercios. Cuando el calor aprieta, nosotros corremos.
                     </p>
                 </div>
-                <button 
-                    onClick={() => window.open('https://wa.me/+5491176685418?text=Hola!%20Quisiera%20consultar%20sobre%20una%20urgencia')}
+                <button
+                    onClick={() => window.open(URGENCIA_WHATSAPP_URL)}
                     className="shrink-0 bg-brand-dark text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-primary transition-colors flex items-center gap-2 shadow-lg shadow-brand-dark/20"
                 >
                     Consultar Ahora <ArrowRight size={18} />
@@ -80,8 +84,8 @@ export const WhyUsGrid = () => {
                 </p>
               </div>
               
-              <button 
-                onClick={() => window.open('https://wa.me/+5491176685418?text=Hola!%20Quisiera%20consultar%20sobre%20mi%20equipo')}
+              <button
+                onClick={() => window.open(CONSULTA_WHATSAPP_URL)}
                 className="bg-white text-brand-dark px-8 py-3 rounded-xl font-bold hover:bg-brand-highlight transition-all flex items-center gap-2 shadow-lg w-full md:w-auto justify-center"
               >
                 <Phone size={20} /> WhatsApp Directo
