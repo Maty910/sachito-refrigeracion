@@ -2,7 +2,7 @@ export const ProcessSteps = () => {
   const steps = [
     { num: '01', title: 'Diagnóstico', desc: 'Evaluamos el equipo y el entorno para detectar la raíz del problema.' },
     { num: '02', title: 'Presupuesto', desc: 'Te pasamos un precio cerrado y claro antes de tocar cualquier tornillo.' },
-    { num: '03', title: 'Ejecución', desc: 'Trabajamos con limpieza y herramientas de precisión (Bomba de vacío, Nitrógeno).' },
+    { num: '03', title: 'Ejecución', desc: 'Trabajamos con herramientas de precisión y de las mejores marcas (Nitrógeno, Vacuómetros, Manómetros Digitales).' },
     { num: '04', title: 'Garantía', desc: 'Te entregamos el equipo funcionando y con garantía escrita.' },
   ];
 
