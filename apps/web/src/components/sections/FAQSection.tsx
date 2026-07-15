@@ -8,7 +8,7 @@ const FAQ_WHATSAPP_URL = `https://wa.me/${COMPANY.contact.whatsapp.number}?text=
 const FAQS = [
   {
     question: "¿Cobran visita técnica?",
-    answer: "Sí, la visita tiene un costo fijo por diagnóstico y viáticos. Lo bueno es que si aceptás el presupuesto de reparación en el momento, ¡la visita se bonifica al 100%!"
+    answer: "Sí, la visita tiene un costo fijo por diagnóstico y viáticos cuando vamos a tu ubicación. Si traés el equipo a nuestra base operativa en Castelar, no cobramos la visita. Además, si aceptás el presupuesto de reparación en el momento, ¡la visita se bonifica al 100%!"
   },
   {
     question: "¿Qué medios de pago aceptan?",
@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     question: "¿Ofrecen garantía por sus servicios?",
-    answer: "Sí, ofrecemos una garantía de 90 días en casi todas nuestras reparaciones e instalaciones, siempre y cuando se sigan las recomendaciones de uso y mantenimiento. Consulta los términos específicos al momento de contratar el servicio."
+    answer: "Sí, ofrecemos una garantía escrita de 90 días en casi todas nuestras reparaciones e instalaciones, siempre y cuando se sigan las recomendaciones de uso y mantenimiento. Consulta los términos específicos al momento de contratar el servicio."
   }
 ];
 
@@ -54,19 +54,21 @@ export const FAQSection = () => {
               <HelpCircle size={14} />
               Resolvemos tus dudas
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-text-main font-display mb-6">
-              Preguntas <br/>
-              <span className="text-text-muted">Frecuentes</span>
+            <h2 className="text-balance font-display text-4xl font-bold text-text-main md:text-5xl">
+              Preguntas Frecuentes
             </h2>
             <p className="text-text-muted text-lg leading-relaxed mb-8">
               Queremos que contrates con total tranquilidad. Acá te dejamos las respuestas a lo que más nos preguntan nuestros clientes.
             </p>
-            <button
-              onClick={() => window.open(FAQ_WHATSAPP_URL)}
-              className="hidden lg:inline-flex text-brand-accent font-bold items-center gap-2 hover:text-brand-highlight transition-colors"
+            <a
+              href={FAQ_WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Escribinos al WhatsApp"
+              className="hidden lg:inline-flex text-brand-accent font-bold items-center gap-2 hover:text-brand-highlight transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-surface-dark rounded-sm motion-reduce:transition-none"
             >
               ¿Tenés otra duda? Escribinos al WhatsApp
-            </button>
+            </a>
           </div>
 
           {/* Columna Derecha: Acordeón Dark */}
@@ -109,12 +111,15 @@ export const FAQSection = () => {
             
             {/* Botón mobile */}
             <div className="lg:hidden mt-8 text-center">
-              <button
-                onClick={() => window.open(FAQ_WHATSAPP_URL)}
-                className="text-brand-accent font-bold inline-flex items-center gap-2 hover:text-brand-highlight transition-colors"
+              <a
+                href={FAQ_WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Escribinos al WhatsApp"
+                className="text-brand-accent font-bold inline-flex items-center gap-2 hover:text-brand-highlight transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-surface-dark rounded-sm motion-reduce:transition-none"
               >
                 ¿Tenés otra duda? Escribinos al WhatsApp
-              </button>
+              </a>
             </div>
           </div>
 
