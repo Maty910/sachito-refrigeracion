@@ -72,7 +72,7 @@ export const Hero = () => {
             <div className="mt-12 flex items-center gap-6 text-sm font-medium text-text-muted">
               <div className="flex items-center gap-2">
                 <ShieldCheck aria-hidden="true" className="text-brand-accent" size={18} />
-                Técnico Certificado
+                Técnicos certificados en transporte
               </div>
               <div className="h-1 w-1 rounded-full bg-gray-600" aria-hidden="true"></div>
               <div className="flex items-center gap-2">
