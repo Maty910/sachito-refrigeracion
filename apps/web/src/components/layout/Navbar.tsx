@@ -80,7 +80,7 @@ function StatusDot() {
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-status-success/60 motion-reduce:animate-none" />
         <span className="relative inline-flex h-2 w-2 rounded-full bg-status-success" />
       </span>
-      Aceptando turnos
+      Agendando turnos
     </span>
   );
 }
