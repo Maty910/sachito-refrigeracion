@@ -22,7 +22,7 @@ export const COMPANY = {
   },
   social: {
     instagram: 'https://www.instagram.com/s.c.refrigeracion/',
-    tiktok: 'https://www.tiktok.com/@sachito.refrigeracion',
+    tiktok: 'https://www.tiktok.com/@s.c.refrigeracion',
   },
   brand: {
     tagline: 'Tu equipo de frío en las mejores manos.',

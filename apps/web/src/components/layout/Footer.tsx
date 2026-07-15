@@ -124,10 +124,10 @@ export const Footer = () => {
             <div>
                 <h4 className="text-white font-bold mb-6 font-display text-lg">Redes Sociales</h4>
                 <div className="flex gap-4">
-                  <a href="https://www.instagram.com/s.c.refrigeracion/?es" className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-brand-accent hover:text-brand-dark hover:border-brand-accent transition-all duration-300 group">
+                  <a href={COMPANY.social.instagram} className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-brand-accent hover:text-brand-dark hover:border-brand-accent transition-all duration-300 group">
                       <InstagramIcon />
                   </a>
-                  <a href="https://www.tiktok.com/@s.c.refrigeracion" className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-brand-accent hover:text-brand-dark hover:border-brand-accent transition-all duration-300 group">
+                  <a href={COMPANY.social.tiktok} className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-brand-accent hover:text-brand-dark hover:border-brand-accent transition-all duration-300 group">
                       <TikTokIcon />
                   </a>
                 </div>
