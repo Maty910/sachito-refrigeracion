@@ -8,13 +8,13 @@ const guarantees = [
   {
     id: '01',
     title: '90 días de Garantía',
-    description: 'En todas nuestras instalaciones completas. Si falla la instalación, volvemos y lo reparamos sin cargo.',
+    description: 'Garantía escrita de 90 días en casi todas nuestras reparaciones e instalaciones. Si falla la instalación, volvemos y lo reparamos sin cargo, siempre siguiendo las recomendaciones de uso y mantenimiento.',
     Icon: ShieldCheck,
   },
   {
     id: '02',
     title: 'Técnicos Especializados',
-    description: 'Técnicos certificados por el Ministerio de Educación.',
+    description: 'Técnicos certificados especializados en refrigeración para el transporte (Thermo King, Carrier, Hwa sung Thermo, Thermo Star, Koovent, Tecno Ref).',
     Icon: Award,
   },
   {
@@ -26,7 +26,7 @@ const guarantees = [
   {
     id: '04',
     title: 'Materiales de 1ra',
-    description: 'Solo usamos caños de cobre y cables normalizados.',
+    description: 'Solo usamos caños de cobre, cables normalizados, mangueras tope de gama y conectores profesionales.',
     Icon: ThumbsUp,
   },
 ] as const;
@@ -50,8 +50,7 @@ export const GuaranteeSection = () => {
             <span className="text-brand-highlight">Respaldo Técnico.</span>
           </h2>
           <p className="text-text-muted text-lg leading-relaxed">
-            Sabemos lo que cuesta invertir en un equipo. Por eso, no solo lo instalamos: lo protegemos.
-            Cada trabajo cuenta con el respaldo de nuestra matrícula oficial.
+            Sabemos lo que cuesta invertir en un equipo de frío. Por eso, no solo lo instalamos, lo protegemos. Cada trabajo cuenta con el respaldo de nuestra garantía oficial.
           </p>
         </div>
 

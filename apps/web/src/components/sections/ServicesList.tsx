@@ -1,12 +1,12 @@
 import { ArrowUpRight, MessageCircleQuestion } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { SERVICES } from '../../data/services.mock';
+import { COMPANY } from '@domain/brand/company';
 
-// Single source of truth for the WhatsApp phone number. Matches the number
-// used in Hero.tsx and Navbar.tsx so the phone stays consistent across the
-// site. The per-item message is built at render time below.
-const WHATSAPP_PHONE = '+5491176685418';
-const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_PHONE}`;
+// Helper local: arma el link de WhatsApp para un servicio puntual usando
+// la función `messages.service` y el número de COMPANY.
+const serviceWhatsappUrl = (title: string): string =>
+  `https://wa.me/${COMPANY.contact.whatsapp.number}?text=${encodeURIComponent(COMPANY.contact.whatsapp.messages.service(title))}`;
 
 export const ServicesList = () => {
   const location = useLocation();
@@ -39,9 +39,6 @@ export const ServicesList = () => {
         {/* Lista de Servicios */}
         <div className="grid gap-6">
           {SERVICES.map((item) => {
-            const whatsappHref = `${WHATSAPP_BASE_URL}?text=Hola, me interesa el servicio de ${item.title}`;
-            const whatsappAriaLabel = `Consultar sobre ${item.title} por WhatsApp al ${WHATSAPP_PHONE}`;
-
             const cardInner = (
               <div className="flex flex-col md:flex-row gap-8 md:items-center justify-between relative z-10">
                 <div className="flex items-start gap-6">
@@ -82,11 +79,11 @@ export const ServicesList = () => {
                   ) : (
                     // Botón Consultar
                     <a
-                      href={whatsappHref}
+                      href={serviceWhatsappUrl(item.title)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={whatsappAriaLabel}
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-primary/10 text-brand-primary transition-colors duration-200 hover:bg-brand-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-ice motion-reduce:transition-none text-sm font-bold"
+                      aria-label={`Consultar sobre ${item.title} por WhatsApp`}
+                      className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-primary/10 text-brand-primary transition-colors duration-200 hover:bg-brand-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-ice motion-reduce:transition-none text-sm font-bold"
                     >
                       Consultar <MessageCircleQuestion size={18} aria-hidden="true" />
                     </a>

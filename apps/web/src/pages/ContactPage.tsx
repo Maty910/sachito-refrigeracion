@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, ArrowRight, Clock } from 'lucide-react';
 import castelarMap from '../assets/images/castelar-map.png';
+import { COMPANY } from '@domain/brand/company';
 
 export const ContactPage = () => {
   return (
@@ -15,19 +16,19 @@ export const ContactPage = () => {
             Contáctanos
           </h1>
           <p className="text-text-muted max-w-2xl mx-auto text-lg">
-            ¿Tenés una urgencia o querés coordinar un mantenimiento? 
+            ¿Tenés una urgencia o querés coordinar un mantenimiento?
             Escribinos y te respondemos en el día.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          
+
           {/* Columna Izquierda: Info de Contacto */}
           <div className="space-y-8">
             {/* Tarjeta de Info */}
             <div className="bg-surface-card border border-white/5 p-8 rounded-3xl">
               <h3 className="text-2xl font-bold text-text-main mb-6 font-display">Vías de Comunicación</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-brand-primary/20 p-3 rounded-lg text-brand-accent">
@@ -35,7 +36,7 @@ export const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-sm text-text-muted font-bold uppercase">Urgencias / WhatsApp</p>
-                    <p className="text-xl text-white font-display">1176685418</p>
+                    <p className="text-xl text-white font-display">11 7668-5418</p>
                     <p className="text-xs text-brand-accent mt-1">Respuesta inmediata</p>
                   </div>
                 </div>
@@ -46,7 +47,7 @@ export const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-sm text-text-muted font-bold uppercase">Zona de Cobertura</p>
-                    <p className="text-lg text-white">Zona Oeste y CABA (Consultar zonas específicas)</p>
+                    <p className="text-lg text-white">{COMPANY.location.coverage}</p>
                   </div>
                 </div>
 
@@ -65,13 +66,13 @@ export const ContactPage = () => {
 
             {/* Mapa */}
             <div className="aspect-video bg-surface-card rounded-3xl border border-white/5 overflow-hidden relative group">
-              <a 
-                href="https://www.google.com/maps/place/Castelar,+Buenos+Aires" 
-                target="_blank" 
+              <a
+                href="https://www.google.com/maps/place/Castelar,+Buenos+Aires"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full h-full"
               >
-                <img 
+                <img
                   src={castelarMap}
                   alt="Mapa de Castelar, Buenos Aires"
                   className="w-full h-full object-cover"
@@ -90,16 +91,21 @@ export const ContactPage = () => {
             <h3 className="text-2xl font-bold text-text-main mb-2 font-display">Mandanos un mensaje</h3>
             <p className="text-text-muted mb-8 text-sm">Te derivamos directo al WhatsApp técnico. Recordá adjuntar fotos con tu consulta.</p>
 
-            <form 
-              className="space-y-6" 
+            <form
+              className="space-y-6"
               onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
                 e.preventDefault();
                 const formData = new FormData(e.currentTarget);
-                const text = `Hola! Soy ${formData.get('name')}. Mi consulta es: ${formData.get('message')} y estoy ubicado en ${formData.get('location')}.`;
-                window.open(`https://wa.me/+5491176685418?text=${encodeURIComponent(text)}`);
+                const name = formData.get('name') ?? '';
+                const message = formData.get('message') ?? '';
+                const location = formData.get('location') ?? '';
+                const text = `${COMPANY.contact.whatsapp.messages.default} Soy ${name}. Mi consulta es: ${message} y estoy ubicado en ${location}.`;
+                window.open(
+                  `https://wa.me/${COMPANY.contact.whatsapp.number}?text=${encodeURIComponent(text)}`,
+                );
               }}
             >
-              
+
               <div>
                 <label htmlFor="contact-name" className="block text-xs font-bold text-brand-accent uppercase mb-2 ml-1">Nombre Completo</label>
                 <input
@@ -130,13 +136,13 @@ export const ContactPage = () => {
                   id="contact-message"
                   name="message"
                   rows={4}
-                  placeholder="Necesito instalar un aire..."
+                  placeholder="Necesito instalar un equipo de frío en un camión Iveco Tector 240-280 Balancín..."
                   className="w-full bg-surface-card border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-all placeholder:text-gray-600 resize-none"
                   required
                 ></textarea>
               </div>
 
-              <button 
+              <button
                 type="submit"
                 className="w-full bg-brand-accent text-brand-dark font-bold py-4 rounded-xl hover:bg-brand-highlight hover:shadow-lg hover:shadow-cyan-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >

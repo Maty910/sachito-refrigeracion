@@ -1,15 +1,10 @@
 import { Phone, Zap, Wrench, MapPin, ArrowRight } from 'lucide-react';
+import { COMPANY } from '@domain/brand/company';
 
-// Single source of truth for the WhatsApp CTA. Matches the number used in
-// Hero.tsx, Navbar.tsx, and ServicesList.tsx so the phone stays consistent
-// across the site. The per-card message is built at render time below.
-const WHATSAPP_PHONE = '+5491176685418';
-const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_PHONE}`;
+const URGENCIA_WHATSAPP_URL = `https://wa.me/${COMPANY.contact.whatsapp.number}?text=${encodeURIComponent(COMPANY.contact.whatsapp.messages.urgency)}`;
+const CONSULTA_WHATSAPP_URL = `https://wa.me/${COMPANY.contact.whatsapp.number}?text=${encodeURIComponent(COMPANY.contact.whatsapp.messages.consult)}`;
 
 export const WhyUsGrid = () => {
-  const urgenciaHref = `${WHATSAPP_BASE_URL}?text=Hola!%20Quisiera%20consultar%20sobre%20una%20urgencia`;
-  const consultaHref = `${WHATSAPP_BASE_URL}?text=Hola!%20Quisiera%20consultar%20sobre%20mi%20equipo`;
-
   return (
     <section id="eleginos" className="py-12 bg-surface-ice relative overflow-hidden">
       {/* Decoración de fondo sutil (Eco del Hero) */}
@@ -43,14 +38,14 @@ export const WhyUsGrid = () => {
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-text-on-ice font-display mb-3">Urgencias 24hs</h3>
                 <p className="text-text-muted-ice leading-relaxed mb-6 md:mb-0 text-base">
-                  Prioridad absoluta para familias con niños, adultos mayores y comercios. Cuando el calor aprieta, nosotros corremos.
+                  Prioridad absoluta para equipos que se dejaron de funcionar de un día para el otro y ya tienen programados viajes.
                 </p>
               </div>
               <a
-                href={urgenciaHref}
+                href={URGENCIA_WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Consultar por urgencia en WhatsApp al ${WHATSAPP_PHONE}`}
+                aria-label="Consultar por urgencia en WhatsApp"
                 className="group shrink-0 inline-flex items-center gap-2 bg-brand-dark text-white px-6 py-3 rounded-xl font-bold transition-colors duration-200 hover:bg-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-ice motion-reduce:transition-none"
               >
                 Consultar Ahora
@@ -69,7 +64,7 @@ export const WhyUsGrid = () => {
             </div>
             <h4 className="text-xl font-bold text-text-on-ice font-display mb-2">Tecnología de Punta</h4>
             <p className="text-sm text-text-muted-ice leading-relaxed">
-              Bomba de vacío o nitrógeno. Diagnósticos precisos que ahorran dinero.
+              Vacuómetros, manómetros digitales y nitrógeno. Diagnósticos precisos que ahorran dinero.
             </p>
           </div>
 
@@ -78,9 +73,9 @@ export const WhyUsGrid = () => {
             <div className="bg-slate-50 w-14 h-14 rounded-xl flex items-center justify-center text-slate-600 mb-6 transition-colors duration-200 group-hover:bg-brand-accent/10 group-hover:text-brand-accent motion-reduce:transition-none">
               <MapPin size={28} aria-hidden="true" />
             </div>
-            <h4 className="text-xl font-bold text-text-on-ice font-display mb-2">Locales en Zona Oeste</h4>
+            <h4 className="text-xl font-bold text-text-on-ice font-display mb-2">Cobertura en Zona Oeste</h4>
             <p className="text-sm text-text-muted-ice leading-relaxed">
-              Castelar, Morón, Ituzaingó. Al estar cerca, llegamos más rápido y con menores costos de traslado.
+              Castelar, Morón, Ituzaingó, Hurlingham, Merlo y Tres de Febrero. Al estar cerca, llegamos más rápido y con menores costos de traslado.
             </p>
           </div>
 
@@ -93,12 +88,11 @@ export const WhyUsGrid = () => {
                   Mandanos foto de tu equipo y te asesoramos sin cargo antes de la visita.
                 </p>
               </div>
-
               <a
-                href={consultaHref}
+                href={CONSULTA_WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Consultar por WhatsApp al ${WHATSAPP_PHONE}`}
+                aria-label="Consultar por WhatsApp"
                 className="group inline-flex items-center gap-2 bg-white text-brand-dark px-8 py-3 rounded-xl font-bold transition-colors duration-200 hover:bg-brand-highlight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark w-full md:w-auto justify-center motion-reduce:transition-none"
               >
                 <Phone size={20} aria-hidden="true" /> WhatsApp Directo

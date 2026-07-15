@@ -4,8 +4,8 @@ export const SERVICES: ServiceItem[] = [
   {
     id: '01',
     title: 'Instalación de Equipos de Frío',
-    desc: 'Instalación profesional para sistemas de refrigeración en camiones, semi-remolques, utilitarios y camionetas, garantizando un rendimiento óptimo y duradero.',
-    tags: ['Sin Polvo', 'Garantía 90 días']
+    desc: 'Instalación profesional de equipos de frío para transporte en camiones, semi-remolques, utilitarios y camionetas, garantizando un rendimiento óptimo y duradero.',
+    tags: ['Sin Polvo', 'Garantía escrita 90 días']
   },
   {
     id: '02',
@@ -17,7 +17,7 @@ export const SERVICES: ServiceItem[] = [
     id: '03',
     title: 'Carga de Gas & Fugas',
     desc: 'Detección de micro-fugas con nitrógeno a alta presión. Carga precisa por balanza digital.',
-    tags: ['R22', 'R404', 'R12' ]
+    tags: ['R22', 'R404', 'R12', 'R134a' ]
   },
   {
     id: '04',
@@ -28,13 +28,13 @@ export const SERVICES: ServiceItem[] = [
   {
     id: '05',
     title: 'Reparación de equipos de frío',
-    desc: 'Reparación de sistemas de refrigeración, utilizando repuestos originales y garantizando un funcionamiento correcto.',
+    desc: 'Reparación de equipos de frío para transporte, utilizando repuestos originales y garantizando un funcionamiento correcto.',
     tags: ['Nuevas tecnologías', 'Repuestos Originales', 'Todas las marcas']
   },
   {
     id: '06',
     title: 'Asesoramiento Personalizado',
     desc: 'Te ayudamos a elegir el equipo que mejor se adapte a tus necesidades y presupuesto. Análisis de espacio, costos y beneficios.',
-    tags: ['Equipos confiables', 'Profesionalismo', 'Equipos confiables']
+    tags: ['Equipos confiables', 'Profesionalismo', 'Garantía de fábrica']
   }
 ];

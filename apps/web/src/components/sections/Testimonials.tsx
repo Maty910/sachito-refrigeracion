@@ -69,7 +69,7 @@ export const Testimonials = () => {
         <div className="text-center mb-16">
           <h2 className="text-balance text-3xl md:text-4xl font-bold text-text-on-ice font-display mb-4">
             Lo que dicen nuestros <br />
-            <span className="text-brand-primary">Vecinos</span>
+            <span className="text-brand-primary">Clientes</span>
           </h2>
           <div className="flex items-center justify-center gap-2 text-text-muted-ice">
             <span className="flex text-yellow-400" aria-hidden="true">

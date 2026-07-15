@@ -1,11 +1,8 @@
 import { ArrowUpRight, ShieldCheck, MapPin, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { COMPANY } from '@domain/brand/company';
 
-// Single source of truth for the Hero WhatsApp CTA. Matches the number
-// corrected in f22efa3 ("+5491176685418") so the link stays in lockstep
-// with the Navbar and other sections.
-const WHATSAPP_URL =
-  'https://wa.me/+5491176685418?text=Hola!%20Quisiera%20solicitar%20un%20turno';
+const HERO_WHATSAPP_URL = `https://wa.me/${COMPANY.contact.whatsapp.number}?text=${encodeURIComponent(COMPANY.contact.whatsapp.messages.schedule)}`;
 
 export const Hero = () => {
   return (
@@ -50,10 +47,10 @@ export const Hero = () => {
 
             <div className="flex flex-col gap-4 sm:flex-row">
               <a
-                href={WHATSAPP_URL}
+                href={HERO_WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Solicitar turno por WhatsApp al +5491176685418"
+                aria-label="Solicitar turno por WhatsApp"
                 className="group inline-flex items-center justify-center gap-3 rounded-md bg-brand-primary px-8 py-4 text-lg font-bold text-white transition-colors duration-200 hover:bg-brand-accent hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark motion-reduce:transition-none"
               >
                 Solicitar Turno Ahora
@@ -75,7 +72,7 @@ export const Hero = () => {
             <div className="mt-12 flex items-center gap-6 text-sm font-medium text-text-muted">
               <div className="flex items-center gap-2">
                 <ShieldCheck aria-hidden="true" className="text-brand-accent" size={18} />
-                Técnico Certificado
+                Técnicos certificados en transporte
               </div>
               <div className="h-1 w-1 rounded-full bg-gray-600" aria-hidden="true"></div>
               <div className="flex items-center gap-2">
@@ -97,7 +94,7 @@ export const Hero = () => {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-status-success/60 motion-reduce:animate-none" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-status-success" />
                 </span>
-                Aceptando turnos
+                Agendando turnos
               </span>
               <h2 className="mt-6 font-display text-2xl font-bold text-white">
                 Servicio técnico para transporte

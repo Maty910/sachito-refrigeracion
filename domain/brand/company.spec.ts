@@ -21,8 +21,22 @@ describe('COMPANY identity contract', () => {
       expect(COMPANY.contact.whatsapp.number).toMatch(/^\+\d{10,15}$/);
     });
 
-    it('expone un mensaje default de WhatsApp con contenido real', () => {
-      expect(COMPANY.contact.whatsapp.defaultMessage).toMatch(/\S/);
+    describe('whatsapp.messages', () => {
+      it.each([
+        ['default', COMPANY.contact.whatsapp.messages.default],
+        ['schedule', COMPANY.contact.whatsapp.messages.schedule],
+        ['urgency', COMPANY.contact.whatsapp.messages.urgency],
+        ['consult', COMPANY.contact.whatsapp.messages.consult],
+      ])('%s no está vacío ni en blanco', (_label, value) => {
+        expect(value).toMatch(/\S/);
+      });
+
+      it('service es una función que produce un mensaje no vacío con el título del servicio', () => {
+        const exampleTitle = 'Instalación de equipo de frío';
+        const result = COMPANY.contact.whatsapp.messages.service(exampleTitle);
+        expect(result).toMatch(/\S/);
+        expect(result).toContain(exampleTitle);
+      });
     });
   });
 
@@ -46,6 +60,16 @@ describe('COMPANY identity contract', () => {
     });
   });
 
+  describe('brand.tagline y serviceRole', () => {
+    it('expone el tagline actualizado con la promesa de "equipo de frío"', () => {
+      expect(COMPANY.brand.tagline).toBe('Tu equipo de frío en las mejores manos.');
+    });
+
+    it('expone el serviceRole como "Servicio Técnico Especializado"', () => {
+      expect(COMPANY.brand.serviceRole).toBe('Servicio Técnico Especializado');
+    });
+  });
+
   describe('COMPANY.brand.logo', () => {
     describe('header', () => {
       it('expone un path público que comienza con "/"', () => {
@@ -56,8 +80,22 @@ describe('COMPANY identity contract', () => {
         expect(COMPANY.brand.logo.header).toMatch(/\S/);
       });
 
-      it('apunta a un asset con extensión .png', () => {
-        expect(COMPANY.brand.logo.header).toMatch(/\.png$/i);
+      it('apunta a un asset con extensión .webp', () => {
+        expect(COMPANY.brand.logo.header).toMatch(/\.webp$/i);
+      });
+    });
+
+    describe('footerLogo', () => {
+      it('existe como string no vacío', () => {
+        expect(COMPANY.brand.logo.footerLogo).toMatch(/\S/);
+      });
+
+      it('expone un path público que comienza con "/"', () => {
+        expect(COMPANY.brand.logo.footerLogo).toMatch(/^\//);
+      });
+
+      it('apunta a un asset con extensión .webp (case-insensitive)', () => {
+        expect(COMPANY.brand.logo.footerLogo).toMatch(/\.webp$/i);
       });
     });
 
@@ -88,8 +126,8 @@ describe('COMPANY identity contract', () => {
       });
     });
 
-    it('header y favicon.webp apuntan a assets distintos (separación semántica UI vs favicon)', () => {
-      expect(COMPANY.brand.logo.header).not.toBe(COMPANY.brand.logo.favicon.webp);
+    it('footerLogo y favicon.ico apuntan a assets distintos (separación semántica footer vs favicon)', () => {
+      expect(COMPANY.brand.logo.footerLogo).not.toBe(COMPANY.brand.logo.favicon.ico);
     });
   });
 });
