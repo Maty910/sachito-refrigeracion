@@ -4,8 +4,8 @@ export const SERVICES: ServiceItem[] = [
   {
     id: '01',
     title: 'Instalación de Equipos de Frío',
-    desc: 'Instalación profesional para sistemas de refrigeración en camiones, semi-remolques, utilitarios y camionetas, garantizando un rendimiento óptimo y duradero.',
-    tags: ['Sin Polvo', 'Garantía 90 días']
+    desc: 'Instalación profesional de equipos de frío para transporte en camiones, semi-remolques, utilitarios y camionetas, garantizando un rendimiento óptimo y duradero.',
+    tags: ['Sin Polvo', 'Garantía escrita 90 días']
   },
   {
     id: '02',
@@ -28,7 +28,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: '05',
     title: 'Reparación de equipos de frío',
-    desc: 'Reparación de sistemas de refrigeración, utilizando repuestos originales y garantizando un funcionamiento correcto.',
+    desc: 'Reparación de equipos de frío para transporte, utilizando repuestos originales y garantizando un funcionamiento correcto.',
     tags: ['Nuevas tecnologías', 'Repuestos Originales', 'Todas las marcas']
   },
   {
