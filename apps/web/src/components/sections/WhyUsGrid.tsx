@@ -38,7 +38,7 @@ export const WhyUsGrid = () => {
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-text-on-ice font-display mb-3">Urgencias 24hs</h3>
                 <p className="text-text-muted-ice leading-relaxed mb-6 md:mb-0 text-base">
-                  Prioridad absoluta para familias con niños, adultos mayores y comercios. Cuando el calor aprieta, nosotros corremos.
+                  Prioridad absoluta para equipos que se dejaron de funcionar de un día para el otro y ya tienen programados viajes.
                 </p>
               </div>
               <a
@@ -64,7 +64,7 @@ export const WhyUsGrid = () => {
             </div>
             <h4 className="text-xl font-bold text-text-on-ice font-display mb-2">Tecnología de Punta</h4>
             <p className="text-sm text-text-muted-ice leading-relaxed">
-              Bomba de vacío o nitrógeno. Diagnósticos precisos que ahorran dinero.
+              Vacuómetros, manómetros digitales y nitrógeno. Diagnósticos precisos que ahorran dinero.
             </p>
           </div>
 
@@ -73,9 +73,9 @@ export const WhyUsGrid = () => {
             <div className="bg-slate-50 w-14 h-14 rounded-xl flex items-center justify-center text-slate-600 mb-6 transition-colors duration-200 group-hover:bg-brand-accent/10 group-hover:text-brand-accent motion-reduce:transition-none">
               <MapPin size={28} aria-hidden="true" />
             </div>
-            <h4 className="text-xl font-bold text-text-on-ice font-display mb-2">Locales en Zona Oeste</h4>
+            <h4 className="text-xl font-bold text-text-on-ice font-display mb-2">Cobertura en Zona Oeste</h4>
             <p className="text-sm text-text-muted-ice leading-relaxed">
-              Castelar, Morón, Ituzaingó. Al estar cerca, llegamos más rápido y con menores costos de traslado.
+              Castelar, Morón, Ituzaingó, Hurlingham, Merlo y Tres de Febrero. Al estar cerca, llegamos más rápido y con menores costos de traslado.
             </p>
           </div>
 
