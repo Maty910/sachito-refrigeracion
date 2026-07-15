@@ -24,7 +24,7 @@ const REVIEWS = [
     text: "Hacemos el mantenimiento de los aires del local con ellos hace 2 años. Siempre responden rápido. Profesionales serios.",
     stars: 5,
     date: "Hace 3 meses"
-  }, 
+  },
   {
     id: 4,
     name: "Joaquín M.",
@@ -32,7 +32,7 @@ const REVIEWS = [
     text: "Muy conforme con el trabajo realizado. El aire estaba quemado por un rayo hace años y lo reparó en el día. Volveré a contactarlos para futuros mantenimientos.",
     stars: 5,
     date: "Hace 2 semanas"
-  }, 
+  },
   {
     id: 5,
     name: "Delfi R.",
@@ -40,7 +40,7 @@ const REVIEWS = [
     text: "Servicio rápido y eficiente. Me explicaron todo el proceso y dejaron todo limpio. El aire funciona mejor que nunca.",
     stars: 5,
     date: "Hace 2 meses"
-  }, 
+  },
   {
     id: 6,
     name: "Gabriela G.",
@@ -51,18 +51,28 @@ const REVIEWS = [
   }
 ];
 
+// Cycle avatar tints across three brand tokens so the six cards — identical in
+// structure otherwise — read as "real humans, different people" without
+// breaking the visual rhythm. Modulo 3 distributes the cycle evenly: pairs of
+// two share a tint and the three tokens appear once per row.
+const AVATAR_TINTS = [
+  'bg-brand-primary/20',
+  'bg-brand-accent/20',
+  'bg-status-success/20',
+] as const;
+
 export const Testimonials = () => {
   return (
     <section className="py-24 bg-surface-ice relative overflow-hidden" id="testimonios">
       <div className="container mx-auto px-6 relative z-10">
-        
+
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-on-ice font-display mb-4">
-            Lo que dicen nuestros <br/>
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary to-brand-accent">Vecinos</span>
+          <h2 className="text-balance text-3xl md:text-4xl font-bold text-text-on-ice font-display mb-4">
+            Lo que dicen nuestros <br />
+            <span className="text-brand-primary">Vecinos</span>
           </h2>
           <div className="flex items-center justify-center gap-2 text-text-muted-ice">
-            <span className="flex text-yellow-400">
+            <span className="flex text-yellow-400" aria-hidden="true">
               {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
             </span>
             <span className="font-bold text-text-on-ice">4.9/5</span>
@@ -71,25 +81,32 @@ export const Testimonials = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {REVIEWS.map((review) => (
-            <div 
+          {REVIEWS.map((review, index) => (
+            <div
               key={review.id}
-              className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 hover:-translate-y-1 transition-transform duration-300 relative group"
+              className="bg-white p-8 rounded-xl border border-slate-200 transition-colors duration-200 hover:border-brand-primary/40 hover:bg-slate-50/40 motion-reduce:transition-none relative group"
             >
-              <Quote className="absolute top-8 right-8 text-brand-primary/10 group-hover:text-brand-primary/20 transition-colors" size={48} />
-              
-              <div className="flex text-yellow-400 mb-4">
+              <Quote
+                aria-hidden="true"
+                className="absolute top-8 right-8 text-brand-primary/10 transition-colors duration-200 group-hover:text-brand-primary/20 motion-reduce:transition-none"
+                size={48}
+              />
+
+              <div
+                className="flex text-yellow-400 mb-4"
+                aria-label={`${review.stars} de 5 estrellas`}
+              >
                 {[...Array(review.stars)].map((_, i) => (
                   <Star key={i} size={18} fill="currentColor" />
                 ))}
               </div>
-              
-              <p className="text-text-muted-ice leading-relaxed mb-6 italic">
+
+              <p className="text-text-muted-ice leading-relaxed mb-6 italic text-pretty">
                 "{review.text}"
               </p>
-              
+
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-primary font-bold font-display">
+                <div className={`w-10 h-10 rounded-full ${AVATAR_TINTS[index % AVATAR_TINTS.length]} flex items-center justify-center text-brand-primary font-bold font-display`}>
                   {review.name.charAt(0)}
                 </div>
                 <div>
