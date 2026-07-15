@@ -11,7 +11,7 @@ const services = [
   {
     id: '02',
     title: 'Reparación',
-    description: 'Diagnóstico y arreglo de sistemas de refrigeración y aire acondicionado.',
+    description: 'Diagnóstico y arreglo de equipos de frío para transporte, con repuestos originales.',
     Icon: Wrench,
   },
   {

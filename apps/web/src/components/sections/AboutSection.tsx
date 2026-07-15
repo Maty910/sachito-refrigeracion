@@ -20,7 +20,7 @@ export const AboutSection = () => {
               <strong>SC Refrigeración</strong> es una empresa joven nacida en Castelar con la misión de brindar soluciones confiables y eficientes para la refrigeración  del transporte de mercaderías.
             </p>
             <p className="text-text-muted-ice text-lg leading-relaxed mb-6">
-              Nos especializamos en la instalación, mantenimiento y reparación de sistemas de refrigeración para <strong>camiones, semi-remolques, utilitarios, camionetas</strong>, asegurando que cada carga llegue a su destino en condiciones óptimas.
+              Nos especializamos en la instalación, mantenimiento y reparación de equipos de frío para <strong>camiones, semi-remolques, utilitarios, camionetas</strong>, asegurando que cada carga llegue a su destino en condiciones óptimas.
             </p>
             <p className="text-text-muted-ice text-lg leading-relaxed mb-8">
               Nuestro <strong>compromiso</strong> con la calidad, la <strong>innovación</strong> y la <strong>satisfacción del cliente</strong> nos impulsa a seguir creciendo y adaptándonos a las necesidades del mercado.
