@@ -5,7 +5,7 @@ export const SERVICES: ServiceItem[] = [
     id: '01',
     title: 'Instalación de Equipos de Frío',
     desc: 'Instalación profesional de equipos de frío para transporte en camiones, semi-remolques, utilitarios y camionetas, garantizando un rendimiento óptimo y duradero.',
-    tags: ['Sin Polvo', 'Garantía escrita 90 días']
+    tags: ['Sin Polvo', 'Garantía escrita 1 año o 850hs de uso']
   },
   {
     id: '02',
