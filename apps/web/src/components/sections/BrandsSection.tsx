@@ -1,11 +1,13 @@
 import { CheckCircle2 } from 'lucide-react';
 
 const BRANDS = [
-  "Surrey", "Carrier", "Samsung", "LG", 
-  "Electra", "BGH", "Philco", "Midea",
-  "Hisense", "York", "Cardiff", "Daikin",
-  "Noblex", "Whirlpool", "Drean",
-  "Sanyo", "Gafa", "Koh-i-noor"
+  'Thermo King',
+  'Carrier',
+  'Hwa sung Thermo',
+  'Thermo Star',
+  'Koovent',
+  'Tecno Ref',
+  'Dongin Thermo',
 ];
 
 export const BrandsSection = () => {
@@ -36,7 +38,7 @@ export const BrandsSection = () => {
 
         {/* Texto adicional */}
         <div className="text-center mb-12">
-          <p className="text-slate-500 italic">Y muchas marcas más...</p>
+          <p className="text-slate-500 italic">Y muchas marcas más… incluyendo arquitectura automotriz para desarrollos a medida.</p>
         </div>
 
         {/* Bajada de confianza */}
