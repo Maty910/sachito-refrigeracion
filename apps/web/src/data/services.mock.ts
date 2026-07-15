@@ -17,7 +17,7 @@ export const SERVICES: ServiceItem[] = [
     id: '03',
     title: 'Carga de Gas & Fugas',
     desc: 'Detección de micro-fugas con nitrógeno a alta presión. Carga precisa por balanza digital.',
-    tags: ['R22', 'R404', 'R12' ]
+    tags: ['R22', 'R404', 'R12', 'R134a' ]
   },
   {
     id: '04',
@@ -35,6 +35,6 @@ export const SERVICES: ServiceItem[] = [
     id: '06',
     title: 'Asesoramiento Personalizado',
     desc: 'Te ayudamos a elegir el equipo que mejor se adapte a tus necesidades y presupuesto. Análisis de espacio, costos y beneficios.',
-    tags: ['Equipos confiables', 'Profesionalismo', 'Equipos confiables']
+    tags: ['Equipos confiables', 'Profesionalismo', 'Garantía de fábrica']
   }
 ];
