@@ -1,6 +1,7 @@
 import { ArrowUpRight, MapPin, Mail, } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SCLogo } from '../ui/SCLogo';
+import { COMPANY } from '@domain/brand/company';
 
 // --- ÍCONOS DE MARCA OFICIALES (SVG PUROS) ---
 const InstagramIcon = () => (
@@ -22,45 +23,53 @@ const WhatsAppIcon = () => (
 );
 
 export const Footer = () => {
-  const phoneNumber = "+5491176685418";
-  const message = "Hola SC! Vi tu web y quería pedirte un presupuesto.";
+  const phoneNumber = COMPANY.contact.whatsapp.number;
+  const message = COMPANY.contact.whatsapp.messages.schedule;
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  // El tagline se renderiza partido: prefijo + highlight con gradiente.
+  // La fuente de verdad es COMPANY.brand.tagline, así que el split es
+  // derivable de él para mantener una sola fuente.
+  const tagline = COMPANY.brand.tagline;
+  const taglineHighlightIdx = tagline.toLowerCase().indexOf('mejores manos');
+  const taglinePrefix = taglineHighlightIdx >= 0 ? tagline.slice(0, taglineHighlightIdx) : tagline;
+  const taglineHighlight = taglineHighlightIdx >= 0 ? tagline.slice(taglineHighlightIdx) : '';
 
   return (
     <footer className="relative pt-24 pb-12 overflow-hidden bg-brand-dark">
-      
+
       {/* FONDO CON GRADIENTE Y MALLA (Moderno y Llamativo) */}
       <div className="absolute inset-0 bg-linear-to-br from-brand-dark via-surface-dark to-brand-primary/30 z-0"></div>
-      
+
       {/* Efectos de luz/Aurora */}
       <div className="absolute top-0 left-1/4 w-125 h-125 bg-brand-accent/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-0 right-0 w-150 h-150 bg-brand-primary/20 rounded-full blur-[100px] pointer-events-none"></div>
 
       {/* CONTENIDO (z-10 para estar sobre el fondo) */}
       <div className="container mx-auto px-6 relative z-10">
-        
+
         {/* 1. SECCIÓN HERO DEL FOOTER */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-24 border-b border-white/10 pb-16">
             <div className="text-center lg:text-left max-w-2xl">
                 <span className="text-brand-highlight font-bold tracking-widest text-sm uppercase mb-4 block font-display">
-                  Servicio Técnico Oficial
+                  {COMPANY.brand.serviceRole}
                 </span>
                 <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white font-display leading-tight mb-6">
-                  TU AIRE EN LAS <br/>
+                  {taglinePrefix.toUpperCase()}<br/>
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-accent to-brand-highlight">
-                    MEJORES MANOS.
+                    {taglineHighlight.toUpperCase()}
                   </span>
                 </h2>
                 <p className="text-text-muted text-lg leading-relaxed">
-                    Diagnósticos precisos, repuestos originales y la tranquilidad de contratar a un Técnico Especializado.
+                    Diagnósticos precisos, repuestos originales y la tranquilidad de contratar con garantía.
                 </p>
             </div>
 
             <div className="flex flex-col gap-4 min-w-75">
                {/* Botón de acción destacado */}
-                <a 
+                <a
                 href={whatsappUrl}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
                 className="group relative flex items-center justify-center gap-3 bg-white text-brand-dark px-8 py-5 rounded-2xl font-bold text-xl hover:bg-brand-highlight transition-all duration-300 shadow-2xl shadow-black/20"
               >
@@ -75,17 +84,17 @@ export const Footer = () => {
 
         {/* 2. GRILLA DE NAVEGACIÓN */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20 justify-center ml-15">
-            
+
             {/* Columna 1: Marca y Ubicación */}
             <div className="space-y-6">
               <SCLogo variant="footer" />
               <div className="flex items-start gap-3 text-text-muted">
                   <MapPin className="shrink-0 mt-1 text-brand-accent" size={20} />
-                  <p className="leading-relaxed">Base Operativa en Castelar.<br/>Cobertura en todo Zona Oeste y CABA (Consultar zonas específicas).</p>
+                  <p className="leading-relaxed">Base Operativa en Castelar.<br/>Cobertura en {COMPANY.location.coverage}.</p>
               </div>
-              <a href="mailto:sachitorefrigeracion.sc@gmail.com" className="flex items-center gap-3 text-text-muted hover:text-white transition-colors">
+              <a href={`mailto:${COMPANY.contact.email}`} className="flex items-center gap-3 text-text-muted hover:text-white transition-colors">
                   <Mail className="shrink-0 text-brand-accent" size={20} />
-                  sachitorefrigeracion.sc@gmail.com
+                  {COMPANY.contact.email}
               </a>
             </div>
 
@@ -104,10 +113,10 @@ export const Footer = () => {
             <div>
               <h4 className="text-white font-bold mb-6 font-display text-lg">Especialidades</h4>
               <ul className="space-y-4 text-text-muted">
-                  <li><span className="cursor-default hover:text-white transition-colors">Instalación y Reparación Split / Multisplit / PisoTecho</span></li>
-                  <li><span className="cursor-default hover:text-white transition-colors">Heladeras / Freezers</span></li>
-                  <li><span className="cursor-default hover:text-white transition-colors">Exhibidoras / Mostrador</span></li>
-                  <li><span className="cursor-default hover:text-white transition-colors">Refrigeración del Transporte</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Refrigeración para Camiones y Semi-Remolques</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Equipos para Utilitarios y Camionetas</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Cámaras y Exhibidoras Comerciales</span></li>
+                  <li><span className="cursor-default hover:text-white transition-colors">Heladeras y Freezers Comerciales</span></li>
               </ul>
             </div>
 
@@ -129,9 +138,7 @@ export const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-muted opacity-60">
           <p>© {new Date().getFullYear()} SC Refrigeración. Todos los derechos reservados.</p>
           <div className="flex gap-6">
-            <span className="hover:text-white cursor-pointer">Técnico Especializado</span>
             <span className="hover:text-white cursor-pointer">Garantía Escrita</span>
-
           </div>
         </div>
       </div>
