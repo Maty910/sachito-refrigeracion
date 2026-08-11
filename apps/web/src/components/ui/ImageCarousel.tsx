@@ -1,4 +1,6 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useReducedMotion } from '../../hooks/useReducedMotion';
+import { useInterval } from '../../hooks/useInterval';
 
 export interface ImageCarouselSlide {
   src: string;
@@ -28,27 +30,18 @@ export const ImageCarousel = ({
 
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const reducedMotion = useMemo<boolean>(() => {
-    if (typeof window === 'undefined') return false;
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  }, []);
+  const reducedMotion = useReducedMotion();
 
   const shouldRotate = !reducedMotion && !isHovered && !isHidden;
 
-  // Auto-rotate: single useEffect, single timer, complete cleanup.
-  useEffect(() => {
-    if (!shouldRotate) return;
-
-    const id = setInterval(() => {
+  useInterval(
+    () => {
       setActive((prev) => (prev + 1) % slides.length);
-    }, intervalMs);
+    },
+    shouldRotate ? intervalMs : null,
+    shouldRotate,
+  );
 
-    return () => {
-      clearInterval(id);
-    };
-  }, [shouldRotate, intervalMs, slides.length, active]);
-
-  // Visibility tracking: dedicated effect, dedicated cleanup.
   useEffect(() => {
     const handleVisibilityChange = () => {
       setIsHidden(document.visibilityState === 'hidden');
