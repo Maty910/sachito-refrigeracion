@@ -1,5 +1,6 @@
 import { CheckCircle2 } from 'lucide-react';
-import homePhoto from '../../assets/images/home-photo.jpeg';
+import { ImageCarousel } from '../ui/ImageCarousel';
+import { ABOUT_SLIDES } from '../../data/about-slides';
 
 export const AboutSection = () => {
   return (
@@ -46,15 +47,12 @@ export const AboutSection = () => {
           <div className="relative">
             {/* Marco decorativo */}
             <div className="absolute inset-0 bg-brand-primary/10 rounded-3xl transform rotate-3 scale-105 -z-10"></div>
-            
-            <div className="aspect-4/3 rounded-3xl overflow-hidden border border-white shadow-2xl relative">
-              {/* Imagen de técnico trabajando */}
-              <img 
-                src={homePhoto} 
-                alt="Técnico de SC trabajando" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-              />
-            </div>
+
+            <ImageCarousel
+              slides={ABOUT_SLIDES}
+              aspectRatio="aspect-4/3"
+              className="rounded-3xl border border-white shadow-2xl"
+            />
           </div>
 
         </div>
