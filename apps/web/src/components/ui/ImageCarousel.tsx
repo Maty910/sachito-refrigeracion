@@ -19,7 +19,7 @@ const DEFAULT_INTERVAL_MS = 5000;
 export const ImageCarousel = ({
   slides,
   intervalMs = DEFAULT_INTERVAL_MS,
-  aspectRatio = 'aspect-4/3',
+  aspectRatio = 'aspect-video',
   className = '',
 }: ImageCarouselProps) => {
   const [active, setActive] = useState<number>(0);
