@@ -1,5 +1,4 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { useReducer } from 'react';
 import { render, fireEvent, screen, cleanup } from '@testing-library/react';
 import { MemoryRouter, useNavigate, useLocation } from 'react-router-dom';
 import { usePageViewTracker } from './usePageViewTracker';
