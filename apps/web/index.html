@@ -39,6 +39,23 @@
       content="Servicio técnico especializado en refrigeración para transporte, camiones y utilitarios en Zona Oeste y CABA. Diagnóstico, instalación, reparación y mantenimiento con garantía escrita."
     />
     <meta name="twitter:image" content="https://screfrigeracion.com/brand-logo.png" />
+
+    <!-- Meta Pixel Code (gateado: solo en producción, no en localhost / 127.x.x.x) -->
+    <script>
+      if (!window.location.hostname.match(/^(localhost|127\.)/)) {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        window.fbq('init', '1251666283689768');
+        window.fbq('track', 'PageView');
+      }
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1251666283689768&ev=PageView&noscript=1"/></noscript>
   </head>
   <body>
     <div id="root"></div>
