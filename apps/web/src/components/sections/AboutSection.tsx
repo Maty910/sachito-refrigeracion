@@ -51,6 +51,7 @@ export const AboutSection = () => {
             <ImageCarousel
               slides={ABOUT_SLIDES}
               aspectRatio="aspect-4/3"
+              showDots
               className="rounded-3xl border border-white shadow-2xl"
             />
           </div>
