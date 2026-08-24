@@ -111,7 +111,7 @@ export const ImageCarousel = ({
       ref={containerRef}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`relative overflow-hidden ${aspectRatio} ${containerBg} ${className}`.trim()}
+      className={`group relative overflow-hidden ${aspectRatio} ${containerBg} ${className}`.trim()}
       aria-live="off"
     >
       {slides.map((s, i) => (
@@ -126,7 +126,9 @@ export const ImageCarousel = ({
           className={`absolute inset-0 h-full w-full ${objectFitClass} ${
             s.objectPosition ?? 'object-center'
           } transition-opacity duration-700 ${
-            i === active ? 'opacity-100' : 'opacity-0'
+            i === active
+              ? 'opacity-100 motion-safe:group-hover:scale-[1.05] motion-safe:transition-transform motion-safe:duration-500 motion-safe:ease-out will-change-transform'
+              : 'opacity-0'
           }`}
         />
       ))}
@@ -165,6 +167,10 @@ export const ImageCarousel = ({
           })}
         </div>
       )}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 motion-safe:group-hover:opacity-100 motion-safe:transition-opacity motion-safe:duration-500 motion-safe:ease-out"
+      />
     </div>
   );
 };

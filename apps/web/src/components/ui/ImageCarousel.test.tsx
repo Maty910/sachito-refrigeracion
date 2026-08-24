@@ -257,4 +257,37 @@ describe('<ImageCarousel />', () => {
       expect(imgs[i]).toHaveClass('opacity-0');
     }
   });
+
+  // ───────────────────────────────────────────────────────────────────
+  // v2.1 — hover effect (zoom + overlay gradient) con motion-safe
+  // ───────────────────────────────────────────────────────────────────
+
+  it('16) contenedor raíz tiene clase "group" y la img activa tiene clase de scale-hover', () => {
+    const { container } = render(<ImageCarousel slides={SLIDES} />);
+    const root = container.firstChild as HTMLElement;
+    expect(root).toHaveClass('group');
+
+    const imgs = getImgs(container);
+    const activeImg = imgs[0];
+    expect(activeImg).toHaveClass('motion-safe:group-hover:scale-[1.05]');
+    expect(activeImg).toHaveClass('will-change-transform');
+
+    // Las inactivas NO tienen la clase de scale-hover ni will-change-transform
+    for (let i = 1; i < imgs.length; i++) {
+      expect(imgs[i]).not.toHaveClass('motion-safe:group-hover:scale-[1.05]');
+      expect(imgs[i]).not.toHaveClass('will-change-transform');
+    }
+  });
+
+  it('17) existe un <div aria-hidden="true"> overlay con pointer-events-none y motion-safe:opacity-100', () => {
+    const { container } = render(<ImageCarousel slides={SLIDES} />);
+    const overlay = container.querySelector('div[aria-hidden="true"].pointer-events-none');
+    expect(overlay).toBeInTheDocument();
+    expect(overlay).toHaveClass('bg-gradient-to-t');
+    expect(overlay).toHaveClass('from-black/40');
+    expect(overlay).toHaveClass('opacity-0');
+    expect(overlay).toHaveClass('motion-safe:group-hover:opacity-100');
+    expect(overlay).toHaveClass('motion-safe:transition-opacity');
+    expect(overlay).toHaveClass('motion-safe:duration-500');
+  });
 });
