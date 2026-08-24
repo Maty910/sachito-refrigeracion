@@ -4,6 +4,7 @@ export const ABOUT_SLIDES: ImageCarouselSlide[] = [
   {
     src: '/about/about-slide-01.webp',
     alt: 'Técnico de SC Refrigeración revisando una unidad de frío en el taller',
+    objectPosition: 'object-[center_25%]',
   },
   {
     src: '/about/about-slide-02.webp',
